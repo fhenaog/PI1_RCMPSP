@@ -5,7 +5,7 @@ start=time.time()
 opt=0
 gaps=[]
 #objs=[]
-for m in range(48,49):
+for m in range(1,49):
     for n in range(1,11):
         inst=str(m)
         sample=str(n)
