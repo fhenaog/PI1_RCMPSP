@@ -17,8 +17,13 @@ for m in range(1,49):
         else:
             gaps=gaps+[problem.gap]
 
-print("Number of optimal results = ",str(opt))
-print("Number of non-optimal results = ",str(480-opt))
-print("Running time = ", time.time()-start)
-print("Gaps ", gaps)
+with open("results.txt", "w") as res:
+    res.write("Number of optimal results = "+str(opt))
+    res.write('\n')
+    res.write("Number of non-optimal results = "+str(480-opt))
+    res.write('\n')
+    res.write("Running time = "+ str(time.time()-start))
+    res.write('\n')
+    res.write("Gaps: ")
+    res.write(str(gaps))
         
