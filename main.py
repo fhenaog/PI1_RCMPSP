@@ -12,9 +12,6 @@ for m in range(1,49):
 
         problem=RCPSP(inst,sample)
         problem.solve()
-        print(problem.objVal)
-        print(problem.status)
-        print(problem.gap)
         if problem.status == 2:
             opt+=1
         else:
