@@ -1,4 +1,4 @@
-Number of optimal results = 10
-Number of non-optimal results = 470
-Running time = 4.40152645111084
-Gaps: []
+Number of optimal results = 478
+Number of non-optimal results = 2
+Running time = 2930.1297793388367
+Gaps: [7.148008171893097, 8.527130699464196]
