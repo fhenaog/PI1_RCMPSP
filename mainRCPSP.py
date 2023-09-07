@@ -6,8 +6,8 @@ opt=0
 gaps=[]
 nonOpt=[]
 nonOptStatus=[]
-#objs=[]
-for m in range(1,49):
+objs=[]
+for m in range(1,2):
     for n in range(1,11):
         inst=str(m)
         sample=str(n)
@@ -16,6 +16,7 @@ for m in range(1,49):
         problem.solve()
         if problem.status == 2:
             opt+=1
+            objs.append(problem.objVal)
         else:
             gaps.append(problem.gap*100)
             nonOpt.append(inst+sample)
@@ -30,6 +31,9 @@ with open("results.txt", "w") as res:
     res.write('\n')
     res.write("Gaps: ")
     res.write(str(gaps))
+    res.write('\n')
+    res.write("Objectives: ")
+    res.write(str(objs))
     # res.write('\n')
     # res.write("non-optimal instances: ")
     # res.write(str(nonOpt))
