@@ -84,3 +84,4 @@ class RCPSP:
         self.objVal=self.RTC.ObjVal
         self.status=self.RTC.Status
         self.gap=self.RTC.MIPGap
+        self.runtime=self.RTC.Runtime
