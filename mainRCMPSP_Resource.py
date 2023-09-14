@@ -7,17 +7,18 @@ gaps=[]
 nonOpt=[]
 nonOptStatus=[]
 objs=[]
+NoProy=[1,2,3]
 alphaVal=[0.0,0.5,1.0]
 with open("resultsResource.txt", "w") as res:
     res.write(f"{'Instance' : ^10}{'No. Proj' : ^10}{'Res Cost Type' : ^15}{'Alpha' : ^10}{'Objective' : ^15}{'Gap' : ^10}{'Runtime' : ^10}{'Resources' : ^40}")
     res.write('\n')
     res.write(''.join(['-' for _ in range(120)]))
     res.write('\n')
-    for m in range(1,2):
+    for m in range(1,49):
         inst=str(m)
         for P in range(2,4):
             for type in range(1,3):
-                for a in range(3):
+                for a in range(len(alphaVal)):
                     alpha=alphaVal[a] 
                     
                     problem=RCMPSP_Resource(inst,P,alpha,1,type)
