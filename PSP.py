@@ -83,7 +83,7 @@ class RCPSP:
         self.RTC.optimize()
         self.objVal=self.RTC.ObjVal
         self.status=self.RTC.Status
-        self.gap=self.RTC.MIPGap
+        self.gap=self.RTC.MIPGap*100
         self.runtime=self.RTC.Runtime
 
 class RCMPSP_Resource:
@@ -255,5 +255,9 @@ class RCMPSP_Resource:
         self.RTC.optimize()
         self.objVal=self.RTC.ObjVal
         self.status=self.RTC.Status
-        self.gap=self.RTC.MIPGap
+        self.gap=self.RTC.MIPGap*100
         self.runtime=self.RTC.Runtime
+        self.resources=[]
+        for v in self.RTC.getVars():
+            if "h" in v.VarName:
+                self.resources.append(v.x)
