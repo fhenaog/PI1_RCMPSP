@@ -87,7 +87,7 @@ class RCPSP:
         self.runtime=self.RTC.Runtime
 
 class RCMPSP_Resource:
-    def __init__(self, inst, P, alpha, beta, ResCostType):
+    def __init__(self, inst, P, alpha, ResCostType):
         core=[]
         pred=[]
         dur=[]
@@ -143,7 +143,7 @@ class RCMPSP_Resource:
                 Rkp[p]=[sum(x) for x in zip(Rkp[p],r[p][i])]
         ckp=[[round(10*Rkp[p][k]/min(Rkp[p])) for k in range(K)] for p in range(P)]
         for p in range(P):
-            w[p]=sum(x*y for x,y in zip(Rkp[p],ckp[p]))*beta
+            w[p]=sum(x*y for x,y in zip(Rkp[p],ckp[p]))
         
         if ResCostType==1:
             c=[10 for k in range(K)]
@@ -171,8 +171,7 @@ class RCMPSP_Resource:
                         if ls[p][i] > ls[p][j] - d[p][i]:
                             ls[p][i] = ls[p][j] - d[p][i]
 
-        alpha=0   #Cmax=sum(es(np))+alpha*[sum(Cmaxp)-sum(es(np))]
-        Cmax=sum(es[p][n[p]-1] for p in range(P))+alpha*(sum(Cmax)-sum(es[p][n[p]-1] for p in range(P)))
+        Cmax=max([es[p][n[p]-1] for p in range(P)])+alpha*(sum(Cmax)-max([es[p][n[p]-1] for p in range(P)]))
 
         self.RTC=gp.Model("Resource Constrained Project Scheduling Problem")
 
