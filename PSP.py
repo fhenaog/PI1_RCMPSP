@@ -14,7 +14,7 @@ class RCPSP:
         d=[dur[i][1] for i in range(len(dur))]
         K=recu[-1][0]
         R=[recu[i][1] for i in range(len(recu))]
-        r=[[core[4*i+j][2] for j in range(K)] for i in range(n)]
+        r=[[core[K*i+j][2] for j in range(K)] for i in range(n)]
         es=[0 for i in range(n)]
         Cmax=sum(d)
         ls=[Cmax for i in range(n)]
@@ -116,7 +116,7 @@ class RCMPSP_Resource:
             n.append(len(J[p]))
             Hr=pred[p]-1
             d.append([dur[p][i][1] for i in range(len(dur[p]))])    
-            r.append([[core[p][4*i+j][2] for j in range(K)] for i in range(n[p])])
+            r.append([[core[p][K*i+j][2] for j in range(K)] for i in range(n[p])])
             es.append([0 for i in range(n[p])])
             Tmax=Tmax+sum(d[p]) 
             Pr=np.zeros((n[p],n[p]))
