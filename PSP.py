@@ -2,11 +2,11 @@ import gurobipy as gp
 import numpy as np
 
 class RCPSP:
-    def __init__(self, inst, sample):
-        core=np.loadtxt("Instancias/rcpsp/Datos30/core"+inst+sample+".txt", dtype='int')
-        pred=np.loadtxt("Instancias/rcpsp/Datos30/pred"+inst+sample+".txt", dtype='int')
-        dur=np.loadtxt("Instancias/rcpsp/Datos30/dura"+inst+sample+".txt", dtype='int')
-        recu=np.loadtxt("Instancias/rcpsp/Datos30/recu"+inst+sample+".txt", dtype='int')
+    def __init__(self, nodes, inst, sample):
+        core=np.loadtxt("Instancias/rcpsp/Datos"+nodes+"/core"+inst+sample+".txt", dtype='int')
+        pred=np.loadtxt("Instancias/rcpsp/Datos"+nodes+"/pred"+inst+sample+".txt", dtype='int')
+        dur=np.loadtxt("Instancias/rcpsp/Datos"+nodes+"/dura"+inst+sample+".txt", dtype='int')
+        recu=np.loadtxt("Instancias/rcpsp/Datos"+nodes+"/recu"+inst+sample+".txt", dtype='int')
         
         J=[dur[i][0] for i in range(len(dur))]
         n=len(J)
@@ -18,6 +18,25 @@ class RCPSP:
         es=[0 for i in range(n)]
         Cmax=sum(d)
         ls=[Cmax for i in range(n)]
+
+        self.nP=len(H)
+        #Resource factor
+        s=0
+        for j in range(1,n-1):
+            for k in range(K):
+                if r[j][k]>0:
+                    s+=1
+
+        self.RF=(1/(n-2))*(1/K)*s
+
+        #Resource Strength
+        s=0
+        self.RS=0
+        for k in range(K):
+            for j in range(1,n-1):
+                s=s+r[j][k]
+            s=(1/(n-2))*s
+            self.RS=self.RS+R[k]/s
 
         P=np.zeros((n,n))
         for h in range(len(H)):
