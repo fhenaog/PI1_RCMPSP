@@ -20,13 +20,13 @@ with open("resultsResource.txt", "w") as res:
             for type in range(1,3):
                 for a in range(len(alphaVal)):
                     alpha=alphaVal[a] 
-                    
-                    problem=RCMPSP_Resource(inst,NoProj(p),alpha,1,type)
+
+                    problem=RCMPSP_Resource(inst,NoProj[p],alpha,type)
                     problem.solve()
 
                     if type==1:
-                        res.write(f"{inst : ^10}{NoProj(p) : ^10}{'Constant' : ^15}{str(alpha) : ^10}{str(round(problem.objVal,1)) : ^15}{str(round(problem.gap,2)) : ^10}{str(round(problem.runtime,2)) : ^10}{str(problem.resources) : ^40}")
+                        res.write(f"{inst : ^10}{NoProj[p] : ^10}{'Constant' : ^15}{str(alpha) : ^10}{str(round(problem.objVal,1)) : ^15}{str(round(problem.gap,2)) : ^10}{str(round(problem.runtime,2)) : ^10}{str(problem.resources) : ^40}")
                         res.write('\n') 
                     else:
-                        res.write(f"{inst : ^10}{NoProj(p) : ^10}{'Variable' : ^15}{str(alpha) : ^10}{str(round(problem.objVal,1)) : ^15}{str(round(problem.gap,2)) : ^10}{str(round(problem.runtime,2)) : ^10}{str(problem.resources) : ^40}")
+                        res.write(f"{inst : ^10}{NoProj[p] : ^10}{'Variable' : ^15}{str(alpha) : ^10}{str(round(problem.objVal,1)) : ^15}{str(round(problem.gap,2)) : ^10}{str(round(problem.runtime,2)) : ^10}{str(problem.resources) : ^40}")
                         res.write('\n')
