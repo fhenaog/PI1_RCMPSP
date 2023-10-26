@@ -362,7 +362,7 @@ class RCMPSP_Selection:
                         if ls[p][i] > ls[p][j] - d[p][i]:
                             ls[p][i] = ls[p][j] - d[p][i]
 
-        Cmax=max([es[p][n[p]-1] for p in range(P)])+alpha*(sum(Cmax)-max([es[p][n[p]-1] for p in range(P)]))
+        Cmax=max(Cmax)+alpha*(sum(Cmax)-max(Cmax))
 
         self.RTC=gp.Model("Resource Constrained Project Scheduling Problem")
 
