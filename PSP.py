@@ -502,12 +502,22 @@ class RCMPSP_Mix:
         pred=[]
         dur=[]
         recu=[]
-        for i in range(P):
-            sample=str(i+1)
-            core.append(np.loadtxt("Instancias/rcpsp/Datos30/core"+inst+sample+".txt", dtype='int'))
-            pred.append(np.loadtxt("Instancias/rcpsp/Datos30/pred"+inst+sample+".txt", dtype='int'))
-            dur.append(np.loadtxt("Instancias/rcpsp/Datos30/dura"+inst+sample+".txt", dtype='int'))
-            recu.append(np.loadtxt("Instancias/rcpsp/Datos30/recu"+inst+sample+".txt", dtype='int'))
+        samp=1
+        count=0
+        Proj=[]
+        while count<P:
+            sample=str(samp)
+            for i in inst:
+                if count>=P:
+                    break
+                instance=str(i)
+                Proj.append([i, samp])            
+                core.append(np.loadtxt("Instancias/rcpsp/Datos30/core"+instance+sample+".txt", dtype='int'))
+                pred.append(np.loadtxt("Instancias/rcpsp/Datos30/pred"+instance+sample+".txt", dtype='int'))
+                dur.append(np.loadtxt("Instancias/rcpsp/Datos30/dura"+instance+sample+".txt", dtype='int'))
+                recu.append(np.loadtxt("Instancias/rcpsp/Datos30/recu"+instance+sample+".txt", dtype='int'))
+                count+=1                
+            samp+=1
         CmaxAll=np.loadtxt("Cmax.txt")
 
         J=[]
@@ -539,13 +549,12 @@ class RCMPSP_Mix:
             for p in range(P):        
                 R[k]=max(R[k],recu[p][k][1])
 
-        Cmax=[]
         for p in range(P):
             ls.append([Tmax for i in range(n[p])])
 
         Cmax=[]
-        for p in range(P):
-            Cmax.append(CmaxAll[10*(int(inst)-1)+p])
+        for p in Proj:
+            Cmax.append(CmaxAll[10*(p[0]-1)+p[1]-1])
         c=[0 for _ in range(K)]
         w=[0 for _ in range(P)]
         Rkp=[[0 for _ in range(K)] for _ in range(P)]
@@ -583,7 +592,7 @@ class RCMPSP_Mix:
 
         Cmax=max([es[p][n[p]-1] for p in range(P)])+alpha*(sum(Cmax)-max([es[p][n[p]-1] for p in range(P)]))
 
-        self.RTC=gp.Model("Resource Constrained Project Scheduling Problem")
+        self.RTC=gp.Model("4_RCMPSP")
 
         x=self.RTC.addVars([(i,p,j,p2) for p in range(P)
                                         for p2 in range(P)
@@ -690,4 +699,8 @@ class RCMPSP_Mix:
                 self.projects.append(v.x)
             if "h" in v.VarName:
                 self.resources.append(v.x)
+
+    def write(self, n):
+        name=self.RTC.ModelName
+        self.RTC.write(name+"_"+str(n)+'.mps')
     
