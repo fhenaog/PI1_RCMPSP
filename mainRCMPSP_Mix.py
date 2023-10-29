@@ -7,16 +7,10 @@ gaps=[]
 nonOpt=[]
 nonOptStatus=[]
 objs=[]
-# NoProj=[2,3,5,10] #Number of projects
-# alphaVal=[0.0,0.25,0.5,0.75,1.0] #alpha values
-# instances=[[13],[48],[29],[24],[13,48,29,24]] #instances (last one is for mixing)
-# result="write" # "solve" --- "write" to write the problem, "solve" to solve the problem
-# n=1
-
-NoProj=[2] #Number of projects
-alphaVal=[0.5] #alpha values
-instances=[[1],[1,2]] #instances (last one is for mixing)
-result="write" # "solve" --- "write" to write the problem, "solve" to sove the problem
+NoProj=[2,3,5,10] #Number of projects
+alphaVal=[0.0,0.25,0.5,0.75,1.0] #alpha values
+instances=[[13],[48],[29],[24],[13,48,29,24]] #instances (last one is for mixing)
+result="write" # "solve" --- "write" to write the problem, "solve" to solve the problem
 n=1
 with open("resultsMix.txt", "w") as res:
     res.write(f"{'Instance' : ^10}{'No. Proj' : ^10}{'Res Cost Type' : ^15}{'Alpha' : ^10}{'Objective' : ^15}{'Gap' : ^10}{'Runtime' : ^10}{'Resources' : ^40}{'Projects' : ^30}")
