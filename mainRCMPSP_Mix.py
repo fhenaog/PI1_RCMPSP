@@ -19,7 +19,7 @@ with open("resultsMix.txt", "w") as res:
     res.write('\n')
     for inst in instances:
         for p in NoProj:
-            for type in range(1,3-1): #For constant or variable resource values 1 - constant, 2 - variable
+            for type in range(1,3): #For constant or variable resource values 1 - constant, 2 - variable
                 for alpha in alphaVal:
 
                     problem=RCMPSP_Mix(inst,p,alpha,type)
