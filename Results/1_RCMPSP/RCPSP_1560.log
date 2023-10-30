@@ -1,0 +1,116 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Fri Nov 10 17:26:38 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1560.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-37/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1560.mps
+Reading time = 1.05 seconds
+RCPSP_1560: 75214 rows, 29890 columns, 266028 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 75214 rows, 29890 columns and 266028 nonzeros
+Model fingerprint: 0x03719370
+Variable types: 122 continuous, 29768 integer (29768 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+02]
+Presolve removed 10830 rows and 1449 columns (presolve time = 5s) ...
+Presolve removed 12611 rows and 2216 columns
+Presolve time: 6.74s
+Presolved: 62603 rows, 27674 columns, 233348 nonzeros
+Variable types: 121 continuous, 27553 integer (27553 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 62603 rows, 27674 columns, 233348 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    8.4496530e+01   5.922165e-03   1.761475e+08      9s
+    4527    8.4000000e+01   0.000000e+00   0.000000e+00     10s
+Concurrent spin time: 3.38s
+
+Solved with dual simplex (dual model)
+
+Root relaxation: objective 8.400000e+01, 31368 iterations, 5.77 seconds (0.43 work units)
+Total elapsed time = 19.22s
+Total elapsed time = 22.90s
+Total elapsed time = 27.40s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   84.00000    0  921          -   84.00000      -     -   41s
+     0     0   84.00000    0  920          -   84.00000      -     -   42s
+     0     0   84.00000    0 2708          -   84.00000      -     -  140s
+     0     0   84.00000    0 3028          -   84.00000      -     -  162s
+     0     0   84.00000    0 2729          -   84.00000      -     -  175s
+     0     0   84.00000    0 2603          -   84.00000      -     -  179s
+     0     0   84.00000    0 2557          -   84.00000      -     -  190s
+     0     0   84.00000    0 2547          -   84.00000      -     -  198s
+     0     0   84.00000    0 2508          -   84.00000      -     -  199s
+     0     0   84.00000    0  992          -   84.00000      -     -  335s
+     0     0   84.00000    0  992          -   84.00000      -     -  336s
+     0     0   84.00000    0 2006          -   84.00000      -     -  410s
+     0     0   84.00000    0 1991          -   84.00000      -     -  417s
+     0     0   84.00000    0 1990          -   84.00000      -     -  421s
+     0     0   84.00000    0 1964          -   84.00000      -     -  421s
+     0     0   84.00000    0 1543          -   84.00000      -     -  468s
+     0     0   84.00000    0 1538          -   84.00000      -     -  468s
+     0     0   84.00000    0 2236          -   84.00000      -     -  521s
+     0     0   84.00000    0 2190          -   84.00000      -     -  526s
+     0     0   84.00000    0 1967          -   84.00000      -     -  536s
+     0     0   84.00000    0 2048          -   84.00000      -     -  543s
+     0     0   84.00000    0 1842          -   84.00000      -     -  545s
+     0     0   84.00000    0 1739          -   84.00000      -     -  630s
+     0     0   84.00000    0 1784          -   84.00000      -     -  636s
+     0     0   84.00000    0 1748          -   84.00000      -     -  636s
+     0     0   84.00000    0 2417          -   84.00000      -     -  893s
+     0     0   84.00000    0 2468          -   84.00000      -     -  899s
+     0     0   84.00000    0 2440          -   84.00000      -     -  900s
+     0     0   84.00000    0 2378          -   84.00000      -     -  902s
+     0     0   84.00000    0 2376          -   84.00000      -     -  903s
+     0     0   84.00000    0 2373          -   84.00000      -     -  903s
+     0     0   84.00000    0 1251          -   84.00000      -     -  998s
+     0     0   84.00000    0 1033          -   84.00000      -     - 1170s
+     0     2   84.00000    0 1032          -   84.00000      -     - 1418s
+     1     4   84.00000    1 1104          -   84.00000      -  6871 2311s
+     2     4   84.00000    1 1161          -   84.00000      -  3746 2687s
+     3     5   84.00794    2 2307          -   84.00000      -  3887 4391s
+
+Cutting planes:
+  Gomory: 58
+  Cover: 44
+  Implied bound: 65
+  Clique: 7
+  MIR: 1393
+  StrongCG: 9
+  Zero half: 1
+  RLT: 795
+  Relax-and-lift: 305
+
+Explored 4 nodes (269489 simplex iterations) in 4404.16 seconds (112.91 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 0
+
+Time limit reached
+Best objective -, best bound 8.400000000000e+01, gap -
+
+Unable to retrieve attribute 'X'
+

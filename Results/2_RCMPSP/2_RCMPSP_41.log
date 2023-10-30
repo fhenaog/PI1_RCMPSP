@@ -1,0 +1,90 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Fri Nov  3 09:32:27 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "2_RCMPSP_41.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-35/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file 2_RCMPSP_41.mps
+Reading time = 0.33 seconds
+2_RCMPSP: 24708 rows, 8260 columns, 88076 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 24708 rows, 8260 columns and 88076 nonzeros
+Model fingerprint: 0xf56e2508
+Variable types: 68 continuous, 8192 integer (8192 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+01]
+  Objective range  [1e+01, 1e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+01]
+Presolve removed 19385 rows and 5812 columns
+Presolve time: 0.47s
+Presolved: 5323 rows, 2448 columns, 20321 nonzeros
+Variable types: 39 continuous, 2409 integer (2405 binary)
+Found heuristic solution: objective 13895.000000
+
+Root relaxation: objective 1.419500e+04, 997 iterations, 0.02 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 14195.0000    0   15 13895.0000 14195.0000  2.16%     -    0s
+H    0     0                    14045.000000 14195.0000  1.07%     -    0s
+H    0     0                    14095.000000 14195.0000  0.71%     -    0s
+     0     0 14195.0000    0   65 14095.0000 14195.0000  0.71%     -    1s
+H    0     0                    14105.000000 14195.0000  0.64%     -    1s
+H    0     0                    14135.000000 14195.0000  0.42%     -    1s
+     0     0 14195.0000    0   55 14135.0000 14195.0000  0.42%     -    1s
+     0     0 14195.0000    0   32 14135.0000 14195.0000  0.42%     -    2s
+     0     0 14195.0000    0   31 14135.0000 14195.0000  0.42%     -    2s
+H    0     0                    14145.000000 14195.0000  0.35%     -    2s
+     0     0 14195.0000    0   71 14145.0000 14195.0000  0.35%     -    2s
+     0     0 14195.0000    0    9 14145.0000 14195.0000  0.35%     -    3s
+     0     0 14195.0000    0   33 14145.0000 14195.0000  0.35%     -    3s
+     0     0 14195.0000    0   46 14145.0000 14195.0000  0.35%     -    3s
+     0     0 14195.0000    0  130 14145.0000 14195.0000  0.35%     -    4s
+     0     0 14195.0000    0  130 14145.0000 14195.0000  0.35%     -    4s
+H    0     0                    14155.000000 14195.0000  0.28%     -    4s
+     0     0 14195.0000    0   32 14155.0000 14195.0000  0.28%     -    4s
+     0     0 14195.0000    0    9 14155.0000 14195.0000  0.28%     -    4s
+     0     2 14195.0000    0    9 14155.0000 14195.0000  0.28%     -    5s
+    13    17 14195.0000    4   38 14155.0000 14195.0000  0.28%   149   10s
+    71    60 14195.0000    7  139 14155.0000 14195.0000  0.28%   188   17s
+H  103    76                    14165.000000 14195.0000  0.21%   202   25s
+   167   116 14194.8684   10  262 14165.0000 14195.0000  0.21%   169   32s
+   272   176 14195.0000   11   34 14165.0000 14195.0000  0.21%   177   36s
+H  415   257                    14195.000000 14195.0000  0.00%   134   88s
+
+Cutting planes:
+  Learned: 413
+  Gomory: 6
+  Cover: 1100
+  Implied bound: 198
+  Clique: 127
+  MIR: 230
+  StrongCG: 22
+  GUB cover: 5
+  Zero half: 4
+  Mod-K: 1
+  RLT: 63
+  Relax-and-lift: 80
+
+Explored 453 nodes (68489 simplex iterations) in 89.17 seconds (3.98 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 9: 14195 14165 14155 ... 13895
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.419500000000e+04, best bound 1.419500000000e+04, gap 0.0000%
+
+Wrote result file '2_RCMPSP_41.sol'
+

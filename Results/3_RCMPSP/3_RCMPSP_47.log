@@ -1,0 +1,98 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 17:19:14 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "3_RCMPSP_47.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-37/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file 3_RCMPSP_47.mps
+Reading time = 0.16 seconds
+3_RCMPSP: 82776 rows, 18531 columns, 295866 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 82776 rows, 18531 columns and 295866 nonzeros
+Model fingerprint: 0x41405393
+Variable types: 96 continuous, 18435 integer (18435 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [7e+03, 7e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Found heuristic solution: objective -121.0000000
+Presolve removed 44682 rows and 3570 columns (presolve time = 5s) ...
+Presolve removed 48072 rows and 4994 columns
+Presolve time: 6.51s
+Presolved: 34704 rows, 13537 columns, 132467 nonzeros
+Variable types: 93 continuous, 13444 integer (13444 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 34704 rows, 13537 columns, 132467 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -1.2100000e+02   0.000000e+00   1.303500e+03      7s
+Concurrent spin time: 0.00s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 2.073500e+04, 6060 iterations, 2.45 seconds (0.65 work units)
+Total elapsed time = 10.60s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 20735.0000    0  250 -121.00000 20735.0000      -     -   12s
+H    0     0                    6713.0000000 20735.0000   209%     -   14s
+H    0     0                    6737.0000000 20735.0000   208%     -   16s
+     0     0 20735.0000    0  506 6737.00000 20735.0000   208%     -   20s
+     0     0 20735.0000    0  473 6737.00000 20735.0000   208%     -   21s
+     0     0 20735.0000    0  235 6737.00000 20735.0000   208%     -   35s
+     0     0 20735.0000    0  558 6737.00000 20735.0000   208%     -   40s
+     0     0 20735.0000    0  206 6737.00000 20735.0000   208%     -   49s
+     0     0 20735.0000    0  419 6737.00000 20735.0000   208%     -   52s
+     0     0 20735.0000    0  207 6737.00000 20735.0000   208%     -   63s
+     0     0 20735.0000    0  543 6737.00000 20735.0000   208%     -   67s
+     0     0 20735.0000    0  224 6737.00000 20735.0000   208%     -   79s
+     0     0 20735.0000    0  344 6737.00000 20735.0000   208%     -   81s
+     0     0 20735.0000    0  237 6737.00000 20735.0000   208%     -   88s
+     0     0 20735.0000    0  237 6737.00000 20735.0000   208%     -   90s
+     0     2 20735.0000    0  231 6737.00000 20735.0000   208%     -  106s
+     1     4 20735.0000    1  228 6737.00000 20735.0000   208%  1617  110s
+     3     8 20735.0000    2  363 6737.00000 20735.0000   208%   730  123s
+     7    16 20735.0000    3  427 6737.00000 20735.0000   208%   696  135s
+    15    30 20735.0000    4  607 6737.00000 20735.0000   208%   724  240s
+    31    56 20735.0000    5  609 6737.00000 20735.0000   208%   591  500s
+    61    86 20735.0000    6  483 6737.00000 20735.0000   208%   402  520s
+    93   116 20735.0000    7  742 6737.00000 20735.0000   208%   371 1702s
+H   94   116                    7043.0000000 20735.0000   194%   367 1703s
+   125   147 20735.0000    7  467 7043.00000 20735.0000   194%   325 1735s
+   157   175 20735.0000    8  451 7043.00000 20735.0000   194%   315 2937s
+   189   205 20735.0000    8  475 7043.00000 20735.0000   194%   278 2983s
+   221   401 20735.0000    9  789 7043.00000 20735.0000   194%   730 3018s
+   434  1047 20735.0000   13  555 7043.00000 20735.0000   194%   454 3123s
+  1312  1945 20735.0000   23  352 7043.00000 20735.0000   194%   278 3265s
+  2804  3716 20735.0000   41  594 7043.00000 20735.0000   194%   242 3472s
+  6323  3717 20735.0000   70  237 7043.00000 20735.0000   194%   225 3596s
+
+Explored 6324 nodes (1476570 simplex iterations) in 3614.00 seconds (195.04 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 4: 7043 6737 6713 -121 
+
+Time limit reached
+Best objective 7.043000000000e+03, best bound 2.073500000000e+04, gap 194.4058%
+
+Wrote result file '3_RCMPSP_47.sol'
+

@@ -1,0 +1,52 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:33:57 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_263.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-39/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_263.mps
+Reading time = 0.01 seconds
+RCPSP_263: 5339 rows, 2080 columns, 17984 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5339 rows, 2080 columns and 17984 nonzeros
+Model fingerprint: 0x6fc8fabc
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 61.0000000
+Presolve removed 3365 rows and 1369 columns
+Presolve time: 0.22s
+Presolved: 1974 rows, 711 columns, 6530 nonzeros
+Variable types: 31 continuous, 680 integer (680 binary)
+
+Root relaxation: objective 6.000000e+01, 278 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                      60.0000000   60.00000  0.00%     -    0s
+     0     0   60.00000    0  162   60.00000   60.00000  0.00%     -    0s
+
+Explored 1 nodes (278 simplex iterations) in 0.23 seconds (0.19 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 60 61 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.000000000000e+01, best bound 6.000000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_263.sol'
+

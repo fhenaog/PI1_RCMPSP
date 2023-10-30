@@ -1,0 +1,127 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 11:59:35 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1336.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-38/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1336.mps
+Reading time = 0.07 seconds
+RCPSP_1336: 42975 rows, 17020 columns, 142890 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 42975 rows, 17020 columns and 142890 nonzeros
+Model fingerprint: 0x0c12a0eb
+Variable types: 92 continuous, 16928 integer (16928 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+02]
+Presolve removed 7284 rows and 1313 columns (presolve time = 5s) ...
+Presolve removed 8495 rows and 2275 columns
+Presolve time: 5.37s
+Presolved: 34480 rows, 14745 columns, 118981 nonzeros
+Variable types: 91 continuous, 14654 integer (14654 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 34480 rows, 14745 columns, 118981 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    9.0411150e+01   4.316460e-02   1.884688e+08      6s
+Concurrent spin time: 0.35s
+
+Solved with dual simplex (dual model)
+
+Root relaxation: objective 8.800000e+01, 16529 iterations, 1.64 seconds (0.13 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   88.00000    0  172          -   88.00000      -     -   10s
+     0     0   88.00000    0  851          -   88.00000      -     -   25s
+     0     0   88.00000    0  797          -   88.00000      -     -   27s
+     0     0   88.00000    0  795          -   88.00000      -     -   27s
+     0     0   88.00000    0  793          -   88.00000      -     -   27s
+     0     0   88.00000    0   34          -   88.00000      -     -   34s
+     0     0   88.00000    0   34          -   88.00000      -     -   36s
+     0     0   88.00000    0   33          -   88.00000      -     -   45s
+     0     0   88.00000    0   82          -   88.00000      -     -   49s
+     0     0   88.00000    0   38          -   88.00000      -     -   58s
+     0     0   88.00000    0  168          -   88.00000      -     -   61s
+     0     0   88.00000    0   51          -   88.00000      -     -   73s
+     0     0   88.00000    0  124          -   88.00000      -     -   82s
+     0     0   88.00000    0   13          -   88.00000      -     -   93s
+     0     0   88.00000    0   18          -   88.00000      -     -   95s
+     0     0   88.00000    0    4          -   88.00000      -     -  100s
+     0     0   88.00000    0   85          -   88.00000      -     -  102s
+     0     0   88.00000    0    4          -   88.00000      -     -  105s
+H    0     0                     488.0000000   88.00000  82.0%     -  107s
+     0     0   88.00000    0    4  488.00000   88.00000  82.0%     -  108s
+H    0     0                      93.0000000   88.00000  5.38%     -  110s
+     0     0   88.00000    0   21   93.00000   88.00000  5.38%     -  123s
+     0     0   88.00000    0  189   93.00000   88.00000  5.38%     -  125s
+     0     0   88.00000    0  220   93.00000   88.00000  5.38%     -  126s
+     0     0   88.00000    0   35   93.00000   88.00000  5.38%     -  132s
+     0     0   88.00000    0   35   93.00000   88.00000  5.38%     -  133s
+     0     0   88.00000    0   14   93.00000   88.00000  5.38%     -  137s
+     0     0   88.00000    0   20   93.00000   88.00000  5.38%     -  138s
+H    0     0                      91.0000000   88.00000  3.30%     -  142s
+H    0     0                      90.0000000   88.00000  2.22%     -  142s
+     0     0   88.00000    0   21   90.00000   88.00000  2.22%     -  142s
+     0     0   88.00000    0  195   90.00000   88.00000  2.22%     -  145s
+     0     0   88.00000    0   10   90.00000   88.00000  2.22%     -  149s
+     0     0   88.00000    0  160   90.00000   88.00000  2.22%     -  151s
+     0     0   88.00000    0   22   90.00000   88.00000  2.22%     -  156s
+     0     0   88.00000    0   27   90.00000   88.00000  2.22%     -  157s
+     0     0   88.00000    0   24   90.00000   88.00000  2.22%     -  160s
+     0     0   88.00000    0   24   90.00000   88.00000  2.22%     -  161s
+     0     2   88.00000    0   19   90.00000   88.00000  2.22%     -  173s
+     1     4   88.00000    1   39   90.00000   88.00000  2.22%  1593  180s
+     3     8   88.00000    2  137   90.00000   88.00000  2.22%   759  187s
+     7    16   88.00000    3  223   90.00000   88.00000  2.22%   499  197s
+    15    27   88.00000    4  171   90.00000   88.00000  2.22%   518  203s
+    31    50   88.00000    5  184   90.00000   88.00000  2.22%   477  218s
+    58    80   88.00000    6  211   90.00000   88.00000  2.22%   367  225s
+    90   108   88.00000    7  166   90.00000   88.00000  2.22%   397  415s
+H   91   108                      89.0000000   88.00000  1.12%   393  415s
+H  105   108                      88.9999997   88.00000  1.12%   375  415s
+H  111   108                      88.0000000   88.00000  0.00%   372  415s
+
+Cutting planes:
+  Gomory: 18
+  Lift-and-project: 1
+  Cover: 1017
+  Implied bound: 362
+  Clique: 373
+  MIR: 424
+  StrongCG: 23
+  Flow cover: 2
+  Zero half: 5
+  Network: 1
+  RLT: 242
+  Relax-and-lift: 143
+
+Explored 122 nodes (132322 simplex iterations) in 416.52 seconds (30.49 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 7: 88 89 89 ... 488
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.800000000000e+01, best bound 8.800000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1336.sol'
+

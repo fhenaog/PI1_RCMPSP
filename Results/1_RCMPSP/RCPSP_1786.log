@@ -1,0 +1,100 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Fri Nov 10 20:14:17 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1786.log"
+Set parameter Threads to value 32
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Wed Nov 15 04:45:12 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1786.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-37/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1786.mps
+Reading time = 0.67 seconds
+RCPSP_1786: 75251 rows, 29890 columns, 266065 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 75251 rows, 29890 columns and 266065 nonzeros
+Model fingerprint: 0x19fbf1bd
+Variable types: 122 continuous, 29768 integer (29768 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 6e+02]
+Presolve removed 11163 rows and 1597 columns (presolve time = 5s) ...
+Presolve removed 11726 rows and 2160 columns
+Presolve time: 6.41s
+Presolved: 63525 rows, 27730 columns, 236176 nonzeros
+Variable types: 121 continuous, 27609 integer (27609 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 63525 rows, 27730 columns, 236176 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    8.8475862e+01   3.868056e-02   3.051807e+08      8s
+    3666    8.6000000e+01   0.000000e+00   0.000000e+00     10s
+Concurrent spin time: 0.55s
+
+Solved with dual simplex (dual model)
+
+Root relaxation: objective 8.600000e+01, 31720 iterations, 3.55 seconds (0.31 work units)
+Total elapsed time = 15.21s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   86.00000    0   62          -   86.00000      -     -   16s
+     0     0   86.00000    0 1521          -   86.00000      -     -   71s
+     0     0   86.00000    0 1548          -   86.00000      -     -   76s
+     0     0   86.00000    0 1508          -   86.00000      -     -   77s
+     0     0   86.00000    0 1027          -   86.00000      -     -   79s
+     0     0   86.00000    0   76          -   86.00000      -     -  118s
+     0     0   86.00000    0  213          -   86.00000      -     -  152s
+     0     0   86.00000    0   34          -   86.00000      -     -  200s
+     0     0   86.00000    0  286          -   86.00000      -     -  390s
+     0     0   86.00000    0  280          -   86.00000      -     -  391s
+     0     0   86.00000    0  274          -   86.00000      -     -  391s
+     0     0   86.00000    0   66          -   86.00000      -     -  403s
+     0     0   86.00000    0   95          -   86.00000      -     -  404s
+     0     0   86.00000    0   16          -   86.00000      -     -  418s
+     0     0   86.00000    0  152          -   86.00000      -     -  420s
+     0     0   86.00000    0    8          -   86.00000      -     -  427s
+     0     0   86.00000    0  162          -   86.00000      -     -  429s
+H    0     0                      86.0000000   86.00000  0.00%     -  437s
+     0     0   86.00000    0    2   86.00000   86.00000  0.00%     -  437s
+
+Cutting planes:
+  Gomory: 4
+  Cover: 1
+  Implied bound: 85
+  MIR: 701
+  RLT: 498
+  Relax-and-lift: 98
+
+Explored 1 nodes (95184 simplex iterations) in 437.54 seconds (40.01 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 86 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.600000000000e+01, best bound 8.600000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1786.sol'
+

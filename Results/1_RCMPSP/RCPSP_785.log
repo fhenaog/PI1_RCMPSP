@@ -1,0 +1,51 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:37:24 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_785.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-39/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_785.mps
+Reading time = 0.03 seconds
+RCPSP_785: 19643 rows, 7750 columns, 71917 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 19643 rows, 7750 columns and 71917 nonzeros
+Model fingerprint: 0x90331195
+Variable types: 62 continuous, 7688 integer (7688 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Presolve removed 7764 rows and 2785 columns
+Presolve time: 2.82s
+Presolved: 11879 rows, 4965 columns, 45399 nonzeros
+Variable types: 61 continuous, 4904 integer (4904 binary)
+
+Root relaxation: objective 7.200000e+01, 1863 iterations, 0.06 seconds (0.04 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                      72.0000000   72.00000  0.00%     -    3s
+     0     0   72.00000    0  720   72.00000   72.00000  0.00%     -    3s
+
+Explored 1 nodes (1863 simplex iterations) in 3.08 seconds (2.36 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 72 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.200000000000e+01, best bound 7.200000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_785.sol'
+

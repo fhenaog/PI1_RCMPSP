@@ -1,0 +1,101 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:37:47 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_805.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-39/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_805.mps
+Reading time = 0.02 seconds
+RCPSP_805: 19662 rows, 7750 columns, 60956 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 19662 rows, 7750 columns and 60956 nonzeros
+Model fingerprint: 0xddf7fc63
+Variable types: 62 continuous, 7688 integer (7688 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+02]
+Presolve removed 10948 rows and 4307 columns
+Presolve time: 4.57s
+Presolved: 8714 rows, 3443 columns, 27038 nonzeros
+Variable types: 61 continuous, 3382 integer (3382 binary)
+
+Root relaxation: objective 1.020000e+02, 1141 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  102.00000    0    9          -  102.00000      -     -    4s
+H    0     0                     115.0000000  102.00000  11.3%     -    5s
+     0     0  102.00000    0  219  115.00000  102.00000  11.3%     -    6s
+     0     0  102.16129    0  216  115.00000  102.16129  11.2%     -    6s
+     0     0  102.16129    0  216  115.00000  102.16129  11.2%     -    6s
+     0     0  103.02817    0  213  115.00000  103.02817  10.4%     -    7s
+     0     0  103.02817    0  236  115.00000  103.02817  10.4%     -    7s
+     0     0  103.02817    0  222  115.00000  103.02817  10.4%     -    7s
+     0     0  103.02817    0  171  115.00000  103.02817  10.4%     -    8s
+     0     0  103.83333    0  245  115.00000  103.83333  9.71%     -    8s
+     0     0  103.83333    0  222  115.00000  103.83333  9.71%     -    8s
+     0     0  104.00879    0  187  115.00000  104.00879  9.56%     -    9s
+     0     0  104.00879    0  155  115.00000  104.00879  9.56%     -    9s
+     0     0  104.01600    0  164  115.00000  104.01600  9.55%     -    9s
+     0     0  104.01600    0  137  115.00000  104.01600  9.55%     -    9s
+     0     0  104.11858    0  138  115.00000  104.11858  9.46%     -    9s
+     0     0  104.11858    0  137  115.00000  104.11858  9.46%     -    9s
+     0     0  104.18564    0   98  115.00000  104.18564  9.40%     -   10s
+     0     0  104.23947    0  132  115.00000  104.23947  9.36%     -   10s
+     0     0  104.23947    0  114  115.00000  104.23947  9.36%     -   10s
+     0     0  104.41958    0  175  115.00000  104.41958  9.20%     -   10s
+     0     0  104.41958    0  166  115.00000  104.41958  9.20%     -   10s
+H    0     0                     114.0000000  104.41958  8.40%     -   10s
+     0     0  104.41958    0   84  114.00000  104.41958  8.40%     -   10s
+     0     0  104.54545    0  331  114.00000  104.54545  8.29%     -   11s
+     0     0  104.54545    0  310  114.00000  104.54545  8.29%     -   11s
+     0     0  104.54545    0  151  114.00000  104.54545  8.29%     -   11s
+     0     0  104.54545    0  167  114.00000  104.54545  8.29%     -   11s
+     0     0  104.54545    0  127  114.00000  104.54545  8.29%     -   11s
+     0     0  105.00000    0   43  114.00000  105.00000  7.89%     -   12s
+     0     0  105.00000    0   43  114.00000  105.00000  7.89%     -   12s
+H    0     0                     113.0000000  105.00000  7.08%     -   12s
+H    0     0                     112.0000000  105.00000  6.25%     -   12s
+     0     0  106.00000    0   78  112.00000  106.00000  5.36%     -   12s
+     0     0  106.00000    0   61  112.00000  106.00000  5.36%     -   12s
+     0     0  106.00000    0   72  112.00000  106.00000  5.36%     -   12s
+     0     0  106.00000    0   72  112.00000  106.00000  5.36%     -   13s
+H    0     0                     111.0000000  106.00000  4.50%     -   13s
+     0     0  106.00000    0  102  111.00000  106.00000  4.50%     -   13s
+     0     0  106.00000    0   89  111.00000  106.00000  4.50%     -   13s
+     0     0  106.00000    0  102  111.00000  106.00000  4.50%     -   13s
+     0     0  106.00000    0   79  111.00000  106.00000  4.50%     -   13s
+     0     0  106.00000    0   13  111.00000  106.00000  4.50%     -   14s
+     0     0  106.00000    0   16  111.00000  106.00000  4.50%     -   14s
+H    0     0                     109.0000000  106.00000  2.75%     -   14s
+     0     0  106.00000    0   17  109.00000  106.00000  2.75%     -   14s
+     0     0  106.00000    0  105  109.00000  106.00000  2.75%     -   14s
+     0     0  108.00000    0    3  109.00000  108.00000  0.92%     -   23s
+H    0     0                     108.0000000  108.00000  0.00%     -   25s
+
+Cutting planes:
+  Learned: 1
+
+Explored 1 nodes (13988 simplex iterations) in 25.98 seconds (5.53 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 7: 108 109 111 ... 115
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.080000000000e+02, best bound 1.080000000000e+02, gap 0.0000%
+
+Wrote result file 'RCPSP_805.sol'
+

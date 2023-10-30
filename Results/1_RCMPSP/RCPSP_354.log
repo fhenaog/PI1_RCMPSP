@@ -1,0 +1,44 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:34:05 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_354.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-35/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_354.mps
+Reading time = 0.01 seconds
+RCPSP_354: 5349 rows, 2080 columns, 16103 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5349 rows, 2080 columns and 16103 nonzeros
+Model fingerprint: 0x4edb3bdf
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective 59.0000000
+Presolve removed 3845 rows and 1584 columns
+Presolve time: 0.33s
+Presolved: 1504 rows, 496 columns, 4182 nonzeros
+Variable types: 31 continuous, 465 integer (465 binary)
+
+Explored 0 nodes (0 simplex iterations) in 0.34 seconds (0.20 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 59 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.900000000000e+01, best bound 5.900000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_354.sol'
+

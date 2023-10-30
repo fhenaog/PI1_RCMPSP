@@ -1,0 +1,75 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 17:15:38 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "3_RCMPSP_45.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-39/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file 3_RCMPSP_45.mps
+Reading time = 0.10 seconds
+3_RCMPSP: 36752 rows, 8258 columns, 130172 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 36752 rows, 8258 columns and 130172 nonzeros
+Model fingerprint: 0x841421e6
+Variable types: 64 continuous, 8194 integer (8194 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [7e+03, 7e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective -89.0000000
+Presolve removed 23169 rows and 3028 columns
+Presolve time: 3.33s
+Presolved: 13583 rows, 5230 columns, 51609 nonzeros
+Variable types: 62 continuous, 5168 integer (5168 binary)
+
+Root relaxation: objective 1.390900e+04, 2459 iterations, 0.08 seconds (0.07 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 13909.0000    0    4  -89.00000 13909.0000      -     -    3s
+H    0     0                    7075.0000000 13909.0000  96.6%     -    4s
+     0     0 13909.0000    0    6 7075.00000 13909.0000  96.6%     -    4s
+     0     0 13909.0000    0   12 7075.00000 13909.0000  96.6%     -    5s
+     0     0 13909.0000    0    4 7075.00000 13909.0000  96.6%     -    5s
+     0     0 13909.0000    0    6 7075.00000 13909.0000  96.6%     -    6s
+     0     0 13909.0000    0    6 7075.00000 13909.0000  96.6%     -    6s
+     0     0 13909.0000    0    2 7075.00000 13909.0000  96.6%     -    7s
+     0     0 13909.0000    0    4 7075.00000 13909.0000  96.6%     -    8s
+     0     0 13909.0000    0    4 7075.00000 13909.0000  96.6%     -    8s
+     0     0 13909.0000    0    4 7075.00000 13909.0000  96.6%     -    9s
+     0     2 13909.0000    0    4 7075.00000 13909.0000  96.6%     -   11s
+    26    34 13909.0000    5   10 7075.00000 13909.0000  96.6%   6.9   17s
+    46    61 13909.0000    6   10 7075.00000 13909.0000  96.6%  11.2   22s
+H   52    61                    13909.000000 13909.0000  0.00%  11.1   22s
+
+Cutting planes:
+  Learned: 2
+  Gomory: 1
+  Cover: 8
+  Implied bound: 10
+  Clique: 2
+  MIR: 6
+  RLT: 4
+  Relax-and-lift: 2
+
+Explored 78 nodes (8849 simplex iterations) in 22.51 seconds (4.50 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 3: 13909 7075 -89 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.390900000000e+04, best bound 1.390900000000e+04, gap 0.0000%
+
+Wrote result file '3_RCMPSP_45.sol'
+

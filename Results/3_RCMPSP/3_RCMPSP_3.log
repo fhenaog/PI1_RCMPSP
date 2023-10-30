@@ -1,0 +1,91 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 16:40:21 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "3_RCMPSP_3.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-37/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file 3_RCMPSP_3.mps
+Reading time = 0.04 seconds
+3_RCMPSP: 36772 rows, 8258 columns, 130252 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 36772 rows, 8258 columns and 130252 nonzeros
+Model fingerprint: 0x1d9b3da1
+Variable types: 64 continuous, 8194 integer (8194 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [7e+03, 7e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Found heuristic solution: objective -91.0000000
+Presolve removed 20364 rows and 1846 columns
+Presolve time: 3.46s
+Presolved: 16408 rows, 6412 columns, 64660 nonzeros
+Variable types: 62 continuous, 6350 integer (6350 binary)
+
+Root relaxation: objective 1.420000e+04, 2578 iterations, 0.06 seconds (0.09 work units)
+Total elapsed time = 5.39s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 14200.0000    0   51  -91.00000 14200.0000      -     -   17s
+     0     0 14200.0000    0  261  -91.00000 14200.0000      -     -   30s
+     0     0 14200.0000    0  250  -91.00000 14200.0000      -     -   30s
+     0     0 14200.0000    0   65  -91.00000 14200.0000      -     -   38s
+     0     0 14200.0000    0   96  -91.00000 14200.0000      -     -   38s
+     0     0 14200.0000    0   57  -91.00000 14200.0000      -     -   43s
+     0     0 14200.0000    0   88  -91.00000 14200.0000      -     -   43s
+H    0     0                    7002.0000000 14200.0000   103%     -   46s
+     0     0 14200.0000    0   56 7002.00000 14200.0000   103%     -   51s
+     0     0 14200.0000    0   84 7002.00000 14200.0000   103%     -   51s
+     0     0 14200.0000    0   57 7002.00000 14200.0000   103%     -   53s
+     0     0 14200.0000    0   62 7002.00000 14200.0000   103%     -   54s
+     0     0 14200.0000    0   62 7002.00000 14200.0000   103%     -   55s
+     0     0 14200.0000    0   57 7002.00000 14200.0000   103%     -   56s
+     0     2 14200.0000    0   55 7002.00000 14200.0000   103%     -   60s
+     3     8 14200.0000    2  211 7002.00000 14200.0000   103%   298   65s
+     7    16 14200.0000    3  197 7002.00000 14200.0000   103%   185   81s
+    15    29 14200.0000    4  258 7002.00000 14200.0000   103%   277  166s
+    31    54 14200.0000    5  236 7002.00000 14200.0000   103%   274  298s
+    60    82 14200.0000    6  181 7002.00000 14200.0000   103%   187  374s
+    92   114 14200.0000    7  373 7002.00000 14200.0000   103%   272  431s
+H  117   114                    7107.0000000 14200.0000   100%   260  431s
+   156   173 14200.0000    9  371 7107.00000 14200.0000   100%   219  678s
+   188   204 14200.0000   10  102 7107.00000 14200.0000   100%   201 2116s
+   190   204 14200.0000    9  275 7107.00000 14200.0000   100%   217 2128s
+   199   204 14200.0000   10   76 7107.00000 14200.0000   100%   292 2142s
+   220   235 14200.0000   11  102 7107.00000 14200.0000   100%   464 3769s
+
+Cutting planes:
+  Learned: 40
+  Gomory: 3
+  Cover: 95
+  Implied bound: 118
+  Clique: 13
+  MIR: 117
+  StrongCG: 10
+  Flow cover: 88
+  Mod-K: 1
+  RLT: 82
+  Relax-and-lift: 49
+
+Explored 253 nodes (132860 simplex iterations) in 3888.33 seconds (34.64 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 3: 7107 7002 -91 
+
+Time limit reached
+Best objective 7.107000000000e+03, best bound 1.420000000000e+04, gap 99.8030%
+
+Wrote result file '3_RCMPSP_3.sol'
+

@@ -1,0 +1,119 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:33:57 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_43.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-35/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_43.mps
+Reading time = 0.02 seconds
+RCPSP_43: 5329 rows, 2080 columns, 17044 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5329 rows, 2080 columns and 17044 nonzeros
+Model fingerprint: 0xb2af4ff7
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 2925 rows and 1095 columns
+Presolve time: 0.14s
+Presolved: 2404 rows, 985 columns, 7733 nonzeros
+Variable types: 31 continuous, 954 integer (954 binary)
+
+Root relaxation: objective 5.800000e+01, 337 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   58.00000    0   15          -   58.00000      -     -    0s
+     0     0   58.00000    0  100          -   58.00000      -     -    0s
+     0     0   58.00000    0   86          -   58.00000      -     -    0s
+     0     0   61.08818    0   44          -   61.08818      -     -    0s
+     0     0   61.08818    0  103          -   61.08818      -     -    0s
+     0     0   61.29215    0  157          -   61.29215      -     -    1s
+     0     0   61.95606    0  126          -   61.95606      -     -    1s
+     0     0   62.20628    0  127          -   62.20628      -     -    1s
+     0     0   62.20628    0  104          -   62.20628      -     -    1s
+     0     0   63.08818    0  114          -   63.08818      -     -    1s
+     0     0   63.08818    0  139          -   63.08818      -     -    1s
+     0     0   63.09019    0  144          -   63.09019      -     -    1s
+     0     0   63.10875    0  146          -   63.10875      -     -    1s
+     0     0   63.12605    0  151          -   63.12605      -     -    2s
+     0     0   63.12657    0  142          -   63.12657      -     -    2s
+     0     0   63.17834    0  144          -   63.17834      -     -    2s
+     0     0   63.38246    0  151          -   63.38246      -     -    2s
+     0     0   63.38305    0  133          -   63.38305      -     -    2s
+     0     0   63.55731    0  141          -   63.55731      -     -    2s
+     0     0   63.55731    0  126          -   63.55731      -     -    2s
+     0     0   63.62543    0  138          -   63.62543      -     -    2s
+     0     0   63.62543    0  118          -   63.62543      -     -    2s
+     0     0   63.95239    0  119          -   63.95239      -     -    2s
+     0     0   63.95239    0   91          -   63.95239      -     -    2s
+     0     0   64.09906    0  104          -   64.09906      -     -    2s
+     0     0   64.09906    0  108          -   64.09906      -     -    2s
+     0     0   64.09906    0  107          -   64.09906      -     -    3s
+     0     0   64.09906    0  113          -   64.09906      -     -    3s
+     0     0   64.09906    0   41          -   64.09906      -     -    3s
+     0     0   64.09906    0   59          -   64.09906      -     -    3s
+     0     0   64.09906    0   35          -   64.09906      -     -    3s
+     0     0   64.09906    0   62          -   64.09906      -     -    3s
+     0     0   64.09906    0   34          -   64.09906      -     -    4s
+     0     0   64.09906    0   64          -   64.09906      -     -    4s
+H    0     0                      95.0000000   64.09906  32.5%     -    4s
+     0     0   64.09906    0   69   95.00000   64.09906  32.5%     -    4s
+     0     0   64.09906    0   42   95.00000   64.09906  32.5%     -    5s
+H    0     0                      93.0000000   64.09906  31.1%     -    5s
+H    0     0                      83.0000000   64.09906  22.8%     -    5s
+     0     2   64.09906    0   42   83.00000   64.09906  22.8%     -    5s
+    88   105   71.61538    7  102   83.00000   64.86831  21.8%   136   12s
+   471   420   78.00000   15  117   83.00000   64.86831  21.8%  46.9   15s
+*  597   514              22      83.0000000   64.86831  21.8%  38.7   15s
+* 2861  1846              40      82.0000000   64.86831  20.9%  17.6   19s
+  2894  1692   76.00000   24   42   82.00000   64.86831  20.9%  17.7   31s
+H 2895  1608                      81.0000000   64.86831  19.9%  17.7   36s
+  2897  1609   73.00000   23   51   81.00000   64.86831  19.9%  17.7   45s
+  2899  1610   76.00000   23   47   81.00000   64.86831  19.9%  17.7   56s
+  2902  1612   80.00000   13   57   81.00000   65.40811  19.2%  17.6   60s
+H 2909  1536                      79.0000000   66.00000  16.5%  17.6   63s
+  2918  1542   79.00000   21   58   79.00000   67.00000  15.2%  17.5   65s
+H 2930  1472                      79.0000000   67.76215  14.2%  17.5   68s
+  2935  1475   69.00000   26  114   79.00000   69.00000  12.7%  17.4   70s
+H 2944  1406                      76.0000000   69.00000  9.21%  17.4   74s
+  2946  1410   69.00000   13   52   76.00000   69.00000  9.21%  27.0   77s
+  2955  1411   69.50000   16   92   76.00000   69.00000  9.21%  27.5   81s
+  2978  1406   75.00000   19   38   76.00000   69.50000  8.55%  27.9   85s
+  3028  1381   75.00000   25   36   76.00000   75.00000  1.32%  28.2   90s
+
+Cutting planes:
+  Learned: 2
+  Gomory: 4
+  Cover: 7
+  Implied bound: 2
+  Clique: 3
+  MIR: 16
+  Flow cover: 54
+  Inf proof: 1
+  RLT: 8
+  Relax-and-lift: 7
+
+Explored 3032 nodes (99085 simplex iterations) in 91.38 seconds (5.70 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 9: 76 79 79 ... 95
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.600000000000e+01, best bound 7.600000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_43.sol'
+

@@ -1,0 +1,100 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 11:47:14 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1012.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-34/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1012.mps
+Reading time = 0.29 seconds
+RCPSP_1012: 42919 rows, 17020 columns, 142834 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 42919 rows, 17020 columns and 142834 nonzeros
+Model fingerprint: 0x8eb1afb7
+Variable types: 92 continuous, 16928 integer (16928 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+02]
+Presolve removed 7611 rows and 1782 columns
+Presolve time: 3.71s
+Presolved: 35308 rows, 15238 columns, 122474 nonzeros
+Variable types: 91 continuous, 15147 integer (15147 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 35308 rows, 15238 columns, 122474 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    8.6125259e+01   4.893083e-03   1.705547e+08      5s
+    2584    8.6000000e+01   0.000000e+00   0.000000e+00      6s
+Concurrent spin time: 1.35s
+
+Solved with dual simplex (dual model)
+
+Root relaxation: objective 8.600000e+01, 16706 iterations, 3.19 seconds (0.14 work units)
+Total elapsed time = 10.59s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   86.00000    0   26          -   86.00000      -     -   14s
+     0     0   86.00000    0  955          -   86.00000      -     -   62s
+     0     0   86.00000    0  953          -   86.00000      -     -   63s
+     0     0   86.00000    0   30          -   86.00000      -     -  100s
+     0     0   86.00000    0    2          -   86.00000      -     -  126s
+     0     0   86.00000    0    6          -   86.00000      -     -  143s
+     0     0   86.00000    0    8          -   86.00000      -     -  147s
+     0     0   86.00000    0   63          -   86.00000      -     -  173s
+     0     0   86.00000    0  502          -   86.00000      -     -  178s
+     0     0   86.00000    0   11          -   86.00000      -     -  200s
+     0     0   86.00000    0   53          -   86.00000      -     -  207s
+     0     0   86.00000    0   11          -   86.00000      -     -  221s
+     0     0   86.00000    0    6          -   86.00000      -     -  224s
+     0     2   86.00000    0    6          -   86.00000      -     -  234s
+     1     4   86.00000    1    6          -   86.00000      -  13.0  238s
+     3     7   86.00000    2    8          -   86.00000      -  27.3  246s
+     7    14   86.00000    3   79          -   86.00000      -  66.7  259s
+    14    25   86.00000    4   92          -   86.00000      -   113  282s
+    28    47   86.00000    5   98          -   86.00000      -   129  321s
+    53    78   86.00000    6  108          -   86.00000      -   113  342s
+    85   105   86.00000    7   88          -   86.00000      -   108  362s
+   117   131   86.00000    8   88          -   86.00000      -   108  376s
+   149   160   86.00000    9   87          -   86.00000      -   103  392s
+   181   177   86.00000   10   37          -   86.00000      -   103  441s
+*  182   177              10      86.0000000   86.00000  0.00%   107  441s
+
+Cutting planes:
+  Gomory: 5
+  Cover: 29
+  Implied bound: 103
+  MIR: 373
+  StrongCG: 1
+  RLT: 469
+  Relax-and-lift: 34
+  PSD: 2
+
+Explored 214 nodes (115566 simplex iterations) in 442.35 seconds (16.39 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 86 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.600000000000e+01, best bound 8.600000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1012.sol'
+

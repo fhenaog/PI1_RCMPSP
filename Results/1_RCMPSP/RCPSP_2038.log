@@ -1,0 +1,122 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Fri Nov 10 22:32:09 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_2038.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-37/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_2038.mps
+Reading time = 0.27 seconds
+RCPSP_2038: 75288 rows, 29890 columns, 280622 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 75288 rows, 29890 columns and 280622 nonzeros
+Model fingerprint: 0xbfa30c2e
+Variable types: 122 continuous, 29768 integer (29768 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+02]
+Presolve removed 11496 rows and 1745 columns (presolve time = 5s) ...
+Presolve removed 12213 rows and 2462 columns
+Presolve time: 6.44s
+Presolved: 63075 rows, 27428 columns, 247954 nonzeros
+Variable types: 121 continuous, 27307 integer (27307 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 63075 rows, 27428 columns, 247954 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    1.0196131e+02   1.172348e-01   2.212588e+08      8s
+    3462    1.0100000e+02   0.000000e+00   0.000000e+00      9s
+Concurrent spin time: 1.20s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 1.010000e+02, 10096 iterations, 2.87 seconds (0.45 work units)
+Total elapsed time = 11.98s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  101.00000    0  113          -  101.00000      -     -   14s
+     0     0  101.00000    0  670          -  101.00000      -     -   36s
+     0     0  101.00000    0  656          -  101.00000      -     -   37s
+     0     0  101.00000    0  653          -  101.00000      -     -   38s
+     0     0  101.00000    0  732          -  101.00000      -     -   41s
+     0     0  101.00000    0  740          -  101.00000      -     -   42s
+     0     0  101.00000    0   42          -  101.00000      -     -  118s
+     0     0  101.00000    0   28          -  101.00000      -     -  165s
+     0     0  101.00000    0   51          -  101.00000      -     -  191s
+     0     0  101.00000    0   10          -  101.00000      -     -  203s
+     0     0  101.00000    0   22          -  101.00000      -     -  204s
+     0     0  101.00000    0   30          -  101.00000      -     -  219s
+     0     0  101.00000    0   32          -  101.00000      -     -  221s
+     0     0  101.00000    0   12          -  101.00000      -     -  242s
+     0     0  101.00000    0   24          -  101.00000      -     -  259s
+     0     0  101.00000    0    9          -  101.00000      -     -  276s
+     0     0  101.00000    0   19          -  101.00000      -     -  278s
+     0     0  101.00000    0   18          -  101.00000      -     -  294s
+     0     0  101.00000    0   40          -  101.00000      -     -  311s
+     0     0  101.00000    0   14          -  101.00000      -     -  328s
+     0     0  101.00000    0   12          -  101.00000      -     -  338s
+     0     2  101.00000    0   12          -  101.00000      -     -  364s
+     1     3  101.00000    1   14          -  101.00000      -  1650  376s
+     3     6  101.00000    2   42          -  101.00000      -   615  387s
+     6    12  101.00000    3   42          -  101.00000      -   348  398s
+    12    24  101.00000    4  409          -  101.00000      -   224  417s
+    24    42  101.00000    5  330          -  101.00000      -   204  450s
+    48    70  101.00000    6  341          -  101.00000      -   185  499s
+    80   101  101.00000    7  268          -  101.00000      -   255  531s
+   112   132  101.00000    8  313          -  101.00000      -   275  556s
+   144   162  101.00000    9  311          -  101.00000      -   236  580s
+   176   197  101.00000   10   12          -  101.00000      -   237  628s
+   211   229  101.00000   11   12          -  101.00000      -   474  662s
+   244   322  101.00000   12   20          -  101.00000      -   555  709s
+   343   514  101.00000   18  142          -  101.00000      -   479  774s
+   538   829  101.00000   18   24          -  101.00000      -   391  901s
+   877  1343  101.00000   24  146          -  101.00000      -   364 1139s
+  1440  2541  101.00000   41    2          -  101.00000      -   373 1530s
+  2769  4198  102.00000   87   84          -  101.00000      -   319 2312s
+  2900  4198  101.00000   41   38          -  101.00000      -   317 2320s
+  4345  4198  105.00000  120  360          -  101.00000      -   292 2327s
+  4732  6944  101.00000   71   58          -  101.00000      -   284 3840s
+  4796  6944  101.01480  113  314          -  101.00000      -   288 3868s
+  5036  6944  101.00000   97  143          -  101.00000      -   275 3915s
+  6507  6944  101.00000   89  295          -  101.00000      -   257 4007s
+* 6963  4493              90     101.0000000  101.00000  0.00%   259 4141s
+  7577  4493     cutoff   99       101.00000  101.00000  0.00%   251 4160s
+
+Cutting planes:
+  Gomory: 11
+  Cover: 29
+  Implied bound: 199
+  MIR: 706
+  StrongCG: 3
+  RLT: 472
+  Relax-and-lift: 142
+
+Explored 7948 nodes (2083769 simplex iterations) in 4207.02 seconds (85.89 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 101 
+
+Time limit reached
+Best objective 1.010000000000e+02, best bound 1.010000000000e+02, gap 0.0000%
+
+Wrote result file 'RCPSP_2038.sol'
+

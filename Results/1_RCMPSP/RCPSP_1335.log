@@ -1,0 +1,96 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 11:58:53 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1335.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-34/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1335.mps
+Reading time = 0.09 seconds
+RCPSP_1335: 42975 rows, 17020 columns, 142890 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 42975 rows, 17020 columns and 142890 nonzeros
+Model fingerprint: 0x89d98f7d
+Variable types: 92 continuous, 16928 integer (16928 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+02]
+Presolve removed 7284 rows and 1313 columns (presolve time = 5s) ...
+Presolve removed 8938 rows and 2428 columns
+Presolve time: 6.76s
+Presolved: 34037 rows, 14592 columns, 117548 nonzeros
+Variable types: 91 continuous, 14501 integer (14501 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 34037 rows, 14592 columns, 117548 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    8.5821808e+01   8.337844e-03   2.252500e+08     32s
+Waiting for other threads to finish...         101s
+Waiting for other threads to finish...         164s
+Concurrent spin time: 172.80s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 8.400000e+01, 5387 iterations, 198.13 seconds (0.16 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   84.00000    0  210          -   84.00000      -     -  218s
+     0     0   84.00000    0  207          -   84.00000      -     -  218s
+     0     0   84.00000    0  657          -   84.00000      -     -  239s
+     0     0   84.00000    0  526          -   84.00000      -     -  240s
+     0     0   84.00000    0  520          -   84.00000      -     -  240s
+     0     0   84.00000    0  404          -   84.00000      -     -  241s
+     0     0   84.00000    0  723          -   84.00000      -     -  241s
+     0     0   84.00000    0  720          -   84.00000      -     -  242s
+     0     0   84.00000    0    9          -   84.00000      -     -  286s
+     0     0   84.00000    0   21          -   84.00000      -     -  288s
+     0     0   84.00000    0   60          -   84.00000      -     -  288s
+     0     0   84.00000    0   70          -   84.00000      -     -  294s
+     0     0   84.00000    0  306          -   84.00000      -     -  296s
+     0     0   84.00000    0    8          -   84.00000      -     -  302s
+     0     0   84.00000    0  299          -   84.00000      -     -  303s
+     0     0   84.00000    0   47          -   84.00000      -     -  305s
+H    0     0                     518.0000000   84.00000  83.8%     -  305s
+     0     0   84.00000    0   39  518.00000   84.00000  83.8%     -  306s
+H    0     0                      84.0000000   84.00000  0.00%     -  312s
+     0     0   84.00000    0   39   84.00000   84.00000  0.00%     -  312s
+
+Cutting planes:
+  Gomory: 40
+  Cover: 7
+  Implied bound: 99
+  Clique: 1
+  MIR: 244
+  StrongCG: 3
+  RLT: 403
+  Relax-and-lift: 465
+
+Explored 1 nodes (39403 simplex iterations) in 312.35 seconds (11.87 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 84 518 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.400000000000e+01, best bound 8.400000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1335.sol'
+

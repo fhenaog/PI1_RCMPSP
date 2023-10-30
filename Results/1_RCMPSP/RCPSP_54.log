@@ -1,0 +1,115 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:33:58 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_54.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-35/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_54.mps
+Reading time = 0.01 seconds
+RCPSP_54: 5329 rows, 2080 columns, 17044 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5329 rows, 2080 columns and 17044 nonzeros
+Model fingerprint: 0xdd38283e
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 2322 rows and 834 columns
+Presolve time: 0.19s
+Presolved: 3007 rows, 1246 columns, 10019 nonzeros
+Variable types: 31 continuous, 1215 integer (1215 binary)
+
+Root relaxation: objective 3.600000e+01, 450 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   36.00000    0   20          -   36.00000      -     -    0s
+     0     0   36.00000    0   52          -   36.00000      -     -    0s
+     0     0   36.00000    0   52          -   36.00000      -     -    0s
+     0     0   36.00000    0   19          -   36.00000      -     -    1s
+     0     0   36.00000    0   23          -   36.00000      -     -    1s
+H    0     0                      48.0000000   36.00000  25.0%     -    1s
+     0     0   36.00000    0   20   48.00000   36.00000  25.0%     -    1s
+H    0     0                      47.0000000   36.00000  23.4%     -    1s
+     0     0   36.00000    0   21   47.00000   36.00000  23.4%     -    1s
+     0     0   36.00000    0   43   47.00000   36.00000  23.4%     -    1s
+     0     0   36.00000    0   40   47.00000   36.00000  23.4%     -    2s
+H    0     0                      45.0000000   36.00000  20.0%     -    2s
+     0     0   36.00000    0   37   45.00000   36.00000  20.0%     -    4s
+     0     0   36.00000    0   64   45.00000   36.00000  20.0%     -    5s
+     0     0   36.00000    0   86   45.00000   36.00000  20.0%     -    6s
+     0     0   36.27027    0   55   45.00000   36.27027  19.4%     -    9s
+     0     0   36.27778    0   61   45.00000   36.27778  19.4%     -    9s
+     0     0   36.42254    0  116   45.00000   36.42254  19.1%     -   10s
+     0     0   36.42857    0  110   45.00000   36.42857  19.0%     -   11s
+H    0     0                      44.0000000   36.42857  17.2%     -   12s
+     0     0   36.42857    0  112   44.00000   36.42857  17.2%     -   12s
+     0     0   36.42857    0  100   44.00000   36.42857  17.2%     -   13s
+H    0     0                      43.0000000   36.42857  15.3%     -   14s
+H    0     0                      42.0000000   36.42857  13.3%     -   14s
+     0     0   36.45455    0   96   42.00000   36.45455  13.2%     -   14s
+     0     0   36.45455    0   95   42.00000   36.45455  13.2%     -   15s
+     0     0   36.45455    0  135   42.00000   36.45455  13.2%     -   17s
+     0     0   36.45455    0  129   42.00000   36.45455  13.2%     -   17s
+     0     0   36.45455    0   53   42.00000   36.45455  13.2%     -   19s
+     0     0   36.45455    0  118   42.00000   36.45455  13.2%     -   20s
+     0     0   36.45455    0   43   42.00000   36.45455  13.2%     -   23s
+     0     0   36.45455    0   49   42.00000   36.45455  13.2%     -   24s
+     0     0   36.45455    0   45   42.00000   36.45455  13.2%     -   27s
+     0     0   36.45455    0   84   42.00000   36.45455  13.2%     -   28s
+     0     0   36.45455    0   59   42.00000   36.45455  13.2%     -   29s
+     0     0   36.45455    0   45   42.00000   36.45455  13.2%     -   31s
+     0     0   37.00000    0   32   42.00000   37.00000  11.9%     -   34s
+     0     0   37.00000    0   70   42.00000   37.00000  11.9%     -   35s
+     0     0   37.00000    0   65   42.00000   37.00000  11.9%     -   36s
+     0     0   37.00000    0  106   42.00000   37.00000  11.9%     -   37s
+     0     0   37.00000    0   94   42.00000   37.00000  11.9%     -   38s
+     0     0   38.00000    0  112   42.00000   38.00000  9.52%     -   39s
+     0     0   38.00000    0   93   42.00000   38.00000  9.52%     -   40s
+     0     0   38.00000    0   78   42.00000   38.00000  9.52%     -   41s
+     0     0   39.00000    0   89   42.00000   39.00000  7.14%     -   42s
+H    0     0                      41.0000000   39.00000  4.88%     -   43s
+     0     0   39.00000    0   42   41.00000   39.00000  4.88%     -   45s
+     0     0   39.00000    0   42   41.00000   39.00000  4.88%     -   45s
+     0     0   39.00000    0   38   41.00000   39.00000  4.88%     -   45s
+     0     0   39.00000    0   56   41.00000   39.00000  4.88%     -   46s
+     0     0   39.00000    0   54   41.00000   39.00000  4.88%     -   46s
+     0     0   39.00000    0   56   41.00000   39.00000  4.88%     -   46s
+H    0     0                      40.0000000   39.00000  2.50%     -   47s
+     0     0   40.00000    0   43   40.00000   40.00000  0.00%     -   49s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 49
+  Implied bound: 29
+  Clique: 60
+  MIR: 93
+  StrongCG: 1
+  Inf proof: 1
+  Mod-K: 1
+  RLT: 29
+  Relax-and-lift: 24
+
+Explored 1 nodes (16979 simplex iterations) in 49.50 seconds (1.28 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 8: 40 41 42 ... 48
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 4.000000000000e+01, best bound 4.000000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_54.sol'
+

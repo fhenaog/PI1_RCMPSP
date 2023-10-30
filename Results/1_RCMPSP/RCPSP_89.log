@@ -1,0 +1,120 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 11:40:47 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_89.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-34/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_89.mps
+Reading time = 0.02 seconds
+RCPSP_89: 5329 rows, 2080 columns, 17974 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5329 rows, 2080 columns and 17974 nonzeros
+Model fingerprint: 0x751d9d7d
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Presolve removed 3143 rows and 1193 columns
+Presolve time: 0.16s
+Presolved: 2186 rows, 887 columns, 7311 nonzeros
+Variable types: 31 continuous, 856 integer (856 binary)
+
+Root relaxation: objective 4.300000e+01, 304 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   43.00000    0   44          -   43.00000      -     -    0s
+     0     0   43.00000    0  128          -   43.00000      -     -    0s
+     0     0   43.00000    0  128          -   43.00000      -     -    0s
+     0     0   46.29630    0   30          -   46.29630      -     -    1s
+     0     0   46.29630    0   48          -   46.29630      -     -    1s
+     0     0   46.29630    0   91          -   46.29630      -     -    1s
+     0     0   46.29630    0   83          -   46.29630      -     -    1s
+     0     0   46.29630    0   52          -   46.29630      -     -    2s
+     0     0   46.29630    0   60          -   46.29630      -     -    2s
+H    0     0                      89.0000000   46.29630  48.0%     -    2s
+H    0     0                      87.0000000   46.29630  46.8%     -    2s
+     0     0   46.29630    0   42   87.00000   46.29630  46.8%     -    2s
+H    0     0                      86.0000000   46.29630  46.2%     -    2s
+     0     0   46.29630    0   40   86.00000   46.29630  46.2%     -    2s
+     0     0   46.29630    0   53   86.00000   46.29630  46.2%     -    3s
+     0     0   46.29630    0   47   86.00000   46.29630  46.2%     -    3s
+H    0     0                      74.0000000   46.29630  37.4%     -    6s
+H    0     2                      72.0000000   46.29630  35.7%     -    7s
+     0     2   46.29630    0   36   72.00000   46.29630  35.7%     -    7s
+H   50    48                      71.0000000   46.29630  34.8%   126    9s
+    89   102   46.93400    7  153   71.00000   46.29630  34.8%   128   11s
+H   93   102                      70.0000000   46.29630  33.9%   124   11s
+H   96   102                      69.0000000   46.29630  32.9%   121   11s
+H  100   102                      68.0000000   46.29630  31.9%   118   11s
+  1047   907   52.09091   32   96   68.00000   46.29630  31.9%  24.4   18s
+H 1074   907                      66.0000000   46.29630  29.9%  24.0   18s
+  2392  1795   55.00000   71   66   66.00000   46.29630  29.9%  16.2   20s
+H 2476  1795                      65.0000000   46.29630  28.8%  16.0   20s
+  3131  1989   60.00000   45   47   65.00000   46.29630  28.8%  15.0   29s
+  3133  1990   59.00000   14   21   65.00000   46.29630  28.8%  15.0   33s
+  3134  1991   61.00000   27   54   65.00000   46.29630  28.8%  15.0   40s
+  3136  1992   60.00000   65   30   65.00000   46.31484  28.7%  15.0   49s
+  3137  1993   62.00000   29  102   65.00000   46.31484  28.7%  15.0   53s
+  3138  1994   57.00000   34   71   65.00000   49.51807  23.8%  15.0   57s
+  3144  1998   56.00000   20   93   65.00000   53.00000  18.5%  15.0   60s
+  3156  2006   55.00000   22  109   65.00000   54.00000  16.9%  14.9   65s
+H 3157  1905                      65.0000000   54.04762  16.8%  14.9   65s
+  3169  1913   61.00000   18   98   65.00000   55.00000  15.4%  14.9   70s
+H 3174  1820                      64.0000000   55.00000  14.1%  14.8   73s
+H 3174  1728                      63.0000000   55.00000  12.7%  14.8   73s
+H 3176  1642                      62.0000000   55.00000  11.3%  14.8   74s
+  3179  1644   55.33333   13  154   62.00000   55.33333  10.8%  14.8   75s
+  3189  1651   58.00000   51  146   62.00000   56.00000  9.68%  14.8   80s
+  3199  1659   56.00000   18   47   62.00000   56.00000  9.68%  31.2   85s
+  3202  1661   56.00000   13   96   62.00000   56.00000  9.68%  31.2   96s
+  3204  1662   56.00000   59   62   62.00000   56.00000  9.68%  31.2  104s
+  3205  1663   60.00000   18   76   62.00000   56.00000  9.68%  31.2  106s
+  3207  1664   60.00000   54  145   62.00000   56.00000  9.68%  31.2  111s
+  3208  1665   56.00000   79  113   62.00000   56.00000  9.68%  31.2  116s
+  3216  1673 infeasible   30        62.00000   56.00000  9.68%  33.8  120s
+  3254  1687 infeasible   34        62.00000   56.00000  9.68%  35.5  125s
+  3312  1679   57.00000   36   79   62.00000   56.00000  9.68%  36.7  130s
+  3477  1639 infeasible   40        62.00000   56.00000  9.68%  37.4  138s
+H 3517  1542                      62.0000000   56.00000  9.68%  37.5  138s
+  3522  1548   56.00000   41   46   62.00000   56.00000  9.68%  37.5  153s
+  3635  1546   56.00000   44   38   62.00000   56.00000  9.68%  37.4  155s
+  4057  1387   56.00000   37   74   62.00000   56.00000  9.68%  37.7  160s
+  4635  1185   56.00000   48   39   62.00000   56.00000  9.68%  37.5  165s
+  5468   841 infeasible   51        62.00000   56.00000  9.68%  35.6  170s
+
+Cutting planes:
+  Learned: 4
+  Gomory: 25
+  Cover: 23
+  Implied bound: 5
+  Projected implied bound: 1
+  Clique: 18
+  MIR: 22
+  Flow cover: 124
+  RLT: 17
+  Relax-and-lift: 21
+
+Explored 5544 nodes (205802 simplex iterations) in 171.88 seconds (11.07 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 10: 62 62 63 ... 70
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.199999999370e+01, best bound 6.199999999370e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_89.sol'
+

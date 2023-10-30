@@ -1,0 +1,93 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 11:47:19 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1057.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-11-06
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-36/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1057.mps
+Reading time = 0.17 seconds
+RCPSP_1057: 42919 rows, 17020 columns, 151024 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 42919 rows, 17020 columns and 151024 nonzeros
+Model fingerprint: 0x2b54c848
+Variable types: 92 continuous, 16928 integer (16928 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+02]
+Presolve removed 7349 rows and 1658 columns
+Presolve time: 2.53s
+Presolved: 35570 rows, 15362 columns, 131339 nonzeros
+Variable types: 91 continuous, 15271 integer (15271 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 35570 rows, 15362 columns, 131339 nonzeros
+
+Concurrent spin time: 0.63s
+
+Solved with dual simplex (dual model)
+
+Root relaxation: objective 8.300000e+01, 17118 iterations, 1.91 seconds (0.16 work units)
+Total elapsed time = 6.93s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   83.00000    0   12          -   83.00000      -     -    8s
+     0     0   83.00000    0   64          -   83.00000      -     -   18s
+     0     0   83.00000    0   64          -   83.00000      -     -   19s
+     0     0   83.00000    0   12          -   83.00000      -     -   29s
+     0     0   83.00000    0    4          -   83.00000      -     -   37s
+     0     0   83.00000    0    4          -   83.00000      -     -   42s
+     0     0   83.00000    0   30          -   83.00000      -     -   43s
+     0     0   83.00000    0    4          -   83.00000      -     -   50s
+     0     0   83.00000    0    4          -   83.00000      -     -   53s
+     0     0   83.00000    0    2          -   83.00000      -     -   60s
+     0     0   83.00000    0   62          -   83.00000      -     -   65s
+     0     0   83.00000    0    2          -   83.00000      -     -   72s
+H    0     0                     487.0000000   83.00000  83.0%     -   73s
+     0     0   83.00000    0    2  487.00000   83.00000  83.0%     -   73s
+H    0     0                      89.0000000   83.00000  6.74%     -   79s
+     0     0   83.00000    0    6   89.00000   83.00000  6.74%     -  120s
+H    0     0                      86.0000000   83.00000  3.49%     -  120s
+     0     0   83.00000    0  220   86.00000   83.00000  3.49%     -  124s
+     0     0   83.00000    0  219   86.00000   83.00000  3.49%     -  126s
+     0     0   83.00000    0    4   86.00000   83.00000  3.49%     -  132s
+     0     0   83.00000    0    3   86.00000   83.00000  3.49%     -  135s
+H    0     0                      83.0000000   83.00000  0.00%     -  136s
+     0     0   83.00000    0    3   83.00000   83.00000  0.00%     -  136s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 41
+  Implied bound: 13
+  Clique: 104
+  MIR: 31
+  StrongCG: 2
+  Zero half: 1
+  RLT: 44
+  Relax-and-lift: 16
+
+Explored 1 nodes (59451 simplex iterations) in 136.24 seconds (12.51 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 4: 83 86 89 487 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.300000000000e+01, best bound 8.300000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1057.sol'
+

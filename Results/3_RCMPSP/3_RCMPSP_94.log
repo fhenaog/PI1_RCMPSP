@@ -1,0 +1,99 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 17:31:27 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "3_RCMPSP_94.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-11-06
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-36/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file 3_RCMPSP_94.mps
+Reading time = 0.60 seconds
+3_RCMPSP: 230130 rows, 51365 columns, 819129 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 230130 rows, 51365 columns and 819129 nonzeros
+Model fingerprint: 0x0fb9cc71
+Variable types: 160 continuous, 51205 integer (51205 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 8e+02]
+  Objective range  [4e+03, 7e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Found heuristic solution: objective -210.0000000
+Presolve removed 100365 rows and 2775 columns (presolve time = 6s) ...
+Presolve removed 100365 rows and 2775 columns (presolve time = 10s) ...
+Presolve removed 100365 rows and 2775 columns (presolve time = 16s) ...
+Presolve removed 104546 rows and 4336 columns (presolve time = 20s) ...
+Presolve removed 104546 rows and 4336 columns
+Presolve time: 20.43s
+Presolved: 125584 rows, 47029 columns, 492298 nonzeros
+Variable types: 155 continuous, 46874 integer (46874 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 125584 rows, 47029 columns, 492298 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -2.1000000e+02   0.000000e+00   1.039344e+03     23s
+    1032   -2.0936382e+02   0.000000e+00   7.496000e+03     25s
+    2368    1.4184390e+04   0.000000e+00   3.387844e+03     31s
+    3298    1.6419699e+04   0.000000e+00   3.611953e+03     36s
+    3608    1.6419976e+04   0.000000e+00   3.527562e+03     41s
+    3908    1.6420009e+04   0.000000e+00   4.396469e+03     47s
+    4108    1.6420029e+04   0.000000e+00   4.215047e+03     50s
+    4448    1.6420555e+04   0.000000e+00   5.257906e+03     55s
+    4828    1.6420596e+04   0.000000e+00   5.118188e+03     62s
+Concurrent spin time: 0.01s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 3.304900e+04, 18975 iterations, 43.99 seconds (4.57 work units)
+Total elapsed time = 78.30s
+Total elapsed time = 82.08s
+Total elapsed time = 87.84s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 33049.0000    0  121 -210.00000 33049.0000      -     -   93s
+H    0     0                    6988.0000000 33049.0000   373%     -  117s
+     0     0 33049.0000    0  654 6988.00000 33049.0000   373%     -  128s
+     0     0 33049.0000    0  808 6988.00000 33049.0000   373%     -  134s
+     0     0 33049.0000    0    2 6988.00000 33049.0000   373%     -  149s
+     0     0 33049.0000    0    4 6988.00000 33049.0000   373%     -  156s
+H    0     0                    25716.000000 33049.0000  28.5%     -  157s
+H    0     0                    33049.000000 33049.0000  0.00%     -  159s
+     0     0 33049.0000    0    2 33049.0000 33049.0000  0.00%     -  159s
+
+Cutting planes:
+  Learned: 2
+  Gomory: 1
+  Cover: 6
+  Implied bound: 15
+  MIR: 46
+  StrongCG: 2
+  Flow cover: 22
+  RLT: 12
+  Relax-and-lift: 6
+
+Explored 1 nodes (83148 simplex iterations) in 159.90 seconds (61.02 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 4: 33049 25716 6988 -210 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.304900000000e+04, best bound 3.304900000000e+04, gap 0.0000%
+
+Wrote result file '3_RCMPSP_94.sol'
+

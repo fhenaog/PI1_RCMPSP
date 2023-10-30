@@ -1,0 +1,99 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 16:41:39 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "3_RCMPSP_8.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-37/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file 3_RCMPSP_8.mps
+Reading time = 4.02 seconds
+3_RCMPSP: 82806 rows, 18531 columns, 295986 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 82806 rows, 18531 columns and 295986 nonzeros
+Model fingerprint: 0x2e831576
+Variable types: 96 continuous, 18435 integer (18435 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [7e+03, 8e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Found heuristic solution: objective -140.0000000
+Presolve removed 39408 rows and 1762 columns (presolve time = 5s) ...
+Presolve removed 41198 rows and 2729 columns (presolve time = 11s) ...
+Presolve removed 42148 rows and 2901 columns
+Presolve time: 11.20s
+Presolved: 40658 rows, 15630 columns, 160640 nonzeros
+Variable types: 93 continuous, 15537 integer (15537 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 40658 rows, 15630 columns, 160640 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0   -1.4000000e+02   0.000000e+00   1.372125e+03     62s
+Concurrent spin time: 7.27s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 2.181400e+04, 6231 iterations, 89.65 seconds (0.64 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 21814.0000    0   94 -140.00000 21814.0000      -     -  218s
+H    0     0                    7058.0000000 21814.0000   209%     -  235s
+     0     0 21814.0000    0  447 7058.00000 21814.0000   209%     -  397s
+     0     0 21814.0000    0  321 7058.00000 21814.0000   209%     -  412s
+H    0     0                    7523.0000000 21814.0000   190%     -  418s
+     0     0 21814.0000    0   94 7523.00000 21814.0000   190%     -  419s
+     0     0 21814.0000    0  132 7523.00000 21814.0000   190%     -  424s
+     0     0 21814.0000    0   99 7523.00000 21814.0000   190%     -  459s
+     0     0 21814.0000    0  171 7523.00000 21814.0000   190%     -  478s
+     0     0 21814.0000    0   90 7523.00000 21814.0000   190%     -  501s
+     0     0 21814.0000    0  124 7523.00000 21814.0000   190%     -  502s
+     0     0 21814.0000    0  101 7523.00000 21814.0000   190%     -  511s
+     0     0 21814.0000    0   91 7523.00000 21814.0000   190%     -  513s
+     0     2 21814.0000    0   91 7523.00000 21814.0000   190%     -  541s
+     3     8 21814.0000    2  221 7523.00000 21814.0000   190%   501  553s
+     7    16 21814.0000    3  550 7523.00000 21814.0000   190%   324  630s
+    15    32 21814.0000    4  965 7523.00000 21814.0000   190%   377  903s
+    31    64 21814.0000    5 1291 7523.00000 21814.0000   190%   701 1351s
+    63    96 21814.0000    6 1519 7523.00000 21814.0000   190%   524 2362s
+    95   128 21814.0000    6  771 7523.00000 21814.0000   190%   678 3708s
+H   99   128                    14721.000000 21814.0000  48.2%   652 4036s
+
+Cutting planes:
+  Learned: 86
+  Gomory: 5
+  Cover: 234
+  Implied bound: 216
+  Clique: 35
+  MIR: 74
+  StrongCG: 16
+  Flow cover: 427
+  RLT: 99
+  Relax-and-lift: 79
+
+Explored 127 nodes (117471 simplex iterations) in 4059.88 seconds (40.21 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 4: 14721 7523 7058 -140 
+
+Time limit reached
+Best objective 1.472100000000e+04, best bound 2.181400000000e+04, gap 48.1829%
+
+Wrote result file '3_RCMPSP_8.sol'
+

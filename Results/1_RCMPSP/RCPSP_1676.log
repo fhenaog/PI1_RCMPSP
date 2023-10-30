@@ -1,0 +1,96 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Fri Nov 10 18:45:56 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1676.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-11-06
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-36/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1676.mps
+Reading time = 0.13 seconds
+RCPSP_1676: 75251 rows, 29890 columns, 237025 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 75251 rows, 29890 columns and 237025 nonzeros
+Model fingerprint: 0xbe72678c
+Variable types: 122 continuous, 29768 integer (29768 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+02]
+Presolve removed 11233 rows and 1627 columns (presolve time = 5s) ...
+Presolve removed 13412 rows and 2656 columns (presolve time = 10s) ...
+Presolve removed 13412 rows and 2656 columns
+Presolve time: 10.00s
+Presolved: 61839 rows, 27234 columns, 203172 nonzeros
+Variable types: 121 continuous, 27113 integer (27113 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 61839 rows, 27234 columns, 203172 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    9.6264613e+01   1.531068e-02   2.110000e+08     12s
+    3663    9.5000000e+01   0.000000e+00   0.000000e+00     13s
+Concurrent spin time: 1.48s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 9.500000e+01, 9608 iterations, 3.85 seconds (0.35 work units)
+Total elapsed time = 19.16s
+Total elapsed time = 21.13s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   95.00000    0   16          -   95.00000      -     -   22s
+     0     0   95.00000    0  481          -   95.00000      -     -   54s
+     0     0   95.00000    0   22          -   95.00000      -     -   74s
+     0     0   95.00000    0  181          -   95.00000      -     -   83s
+     0     0   95.00000    0    4          -   95.00000      -     -   93s
+     0     0   95.00000    0    4          -   95.00000      -     -  104s
+H    0     0                      97.0000000   95.00000  2.06%     -  108s
+     0     0   95.00000    0  387   97.00000   95.00000  2.06%     -  114s
+     0     0   95.00000    0   78   97.00000   95.00000  2.06%     -  160s
+     0     0   95.00000    0  365   97.00000   95.00000  2.06%     -  167s
+     0     0   95.00000    0  362   97.00000   95.00000  2.06%     -  167s
+     0     0   95.00000    0  629   97.00000   95.00000  2.06%     -  176s
+H    0     0                      96.0000000   95.00000  1.04%     -  188s
+     0     0   95.00000    0    4   96.00000   95.00000  1.04%     -  188s
+     0     0   95.00000    0    6   96.00000   95.00000  1.04%     -  189s
+     0     0   95.00000    0    8   96.00000   95.00000  1.04%     -  193s
+H    0     0                      95.0000000   95.00000  0.00%     -  196s
+     0     0   95.00000    0  278   95.00000   95.00000  0.00%     -  196s
+
+Cutting planes:
+  Gomory: 10
+  Cover: 215
+  Implied bound: 25
+  Clique: 393
+  MIR: 111
+  StrongCG: 18
+  RLT: 65
+  Relax-and-lift: 26
+
+Explored 1 nodes (74693 simplex iterations) in 196.66 seconds (24.06 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 3: 95 96 97 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 9.500000000000e+01, best bound 9.500000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1676.sol'
+

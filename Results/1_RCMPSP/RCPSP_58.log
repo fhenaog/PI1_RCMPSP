@@ -1,0 +1,66 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:33:58 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_58.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-35/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_58.mps
+Reading time = 0.01 seconds
+RCPSP_58: 5329 rows, 2080 columns, 17044 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5329 rows, 2080 columns and 17044 nonzeros
+Model fingerprint: 0xa8fa8ddf
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 2285 rows and 812 columns
+Presolve time: 0.17s
+Presolved: 3044 rows, 1268 columns, 10168 nonzeros
+Variable types: 31 continuous, 1237 integer (1237 binary)
+
+Root relaxation: objective 3.900000e+01, 476 iterations, 0.01 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   39.00000    0    2          -   39.00000      -     -    0s
+H    0     0                      41.0000000   39.00000  4.88%     -    0s
+     0     0   39.00000    0   34   41.00000   39.00000  4.88%     -    0s
+     0     0   39.00000    0    2   41.00000   39.00000  4.88%     -    3s
+     0     0   39.00000    0    7   41.00000   39.00000  4.88%     -    3s
+H    0     0                      40.0000000   39.00000  2.50%     -    4s
+     0     0   39.00000    0    3   40.00000   39.00000  2.50%     -    5s
+H    0     0                      39.0000000   39.00000  0.00%     -    5s
+     0     0   39.00000    0    9   39.00000   39.00000  0.00%     -    5s
+
+Cutting planes:
+  Cover: 5
+  Implied bound: 1
+  Clique: 6
+  MIR: 4
+  RLT: 1
+  Relax-and-lift: 1
+
+Explored 1 nodes (2983 simplex iterations) in 5.88 seconds (0.31 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 3: 39 40 41 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 3.900000000000e+01, best bound 3.900000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_58.sol'
+

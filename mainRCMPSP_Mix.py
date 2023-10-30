@@ -10,7 +10,7 @@ objs=[]
 NoProj=[2,3,5,10] #Number of projects
 alphaVal=[0.0,0.25,0.5,0.75,1.0] #alpha values
 instances=[[13],[48],[29],[24],[13,48,29,24]] #instances (last one is for mixing)
-result="write" # "solve" --- "write" to write the problem, "solve" to solve the problem
+result="w" # "s" --- "w" to write the problem, "s" to solve the problem
 n=1
 with open("resultsMix.txt", "w") as res:
     res.write(f"{'Instance' : ^10}{'No. Proj' : ^10}{'Res Cost Type' : ^15}{'Alpha' : ^10}{'Objective' : ^15}{'Gap' : ^10}{'Runtime' : ^10}{'Resources' : ^40}{'Projects' : ^30}")
@@ -23,7 +23,7 @@ with open("resultsMix.txt", "w") as res:
                 for alpha in alphaVal:
 
                     problem=RCMPSP_Mix(inst,p,alpha,type)
-                    if result=="solve":
+                    if result=="s":
                         problem.solve()
 
                         if type==1:
@@ -32,6 +32,6 @@ with open("resultsMix.txt", "w") as res:
                         else:
                             res.write(f"{inst : ^10}{NoProj[p] : ^10}{'Variable' : ^15}{str(alpha) : ^10}{str(round(problem.objVal,1)) : ^15}{str(round(problem.gap,2)) : ^10}{str(round(problem.runtime,2)) : ^10}{str(problem.resources) : ^40}{str(problem.projects) : ^30}")
                             res.write('\n')
-                    elif result=="write":
+                    elif result=="w":
                         problem.write(n)
                         n+=1

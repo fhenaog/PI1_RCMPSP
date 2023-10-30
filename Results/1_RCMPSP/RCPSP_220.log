@@ -1,0 +1,78 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:33:56 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_220.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-39/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_220.mps
+Reading time = 0.00 seconds
+RCPSP_220: 5339 rows, 2080 columns, 17054 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5339 rows, 2080 columns and 17054 nonzeros
+Model fingerprint: 0x544a4959
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 2707 rows and 1020 columns
+Presolve time: 0.18s
+Presolved: 2632 rows, 1060 columns, 8625 nonzeros
+Variable types: 31 continuous, 1029 integer (1029 binary)
+
+Root relaxation: objective 5.200000e+01, 388 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   52.00000    0   10          -   52.00000      -     -    0s
+     0     0   52.00000    0   31          -   52.00000      -     -    0s
+     0     0   52.00000    0   33          -   52.00000      -     -    0s
+H    0     0                      65.0000000   52.00000  20.0%     -    0s
+     0     0   52.00000    0   25   65.00000   52.00000  20.0%     -    0s
+     0     0   52.00000    0   25   65.00000   52.00000  20.0%     -    0s
+     0     0   52.00000    0   10   65.00000   52.00000  20.0%     -    0s
+H    0     0                      59.0000000   52.00000  11.9%     -    0s
+     0     0   52.00000    0   27   59.00000   52.00000  11.9%     -    0s
+     0     0   52.00000    0    4   59.00000   52.00000  11.9%     -    0s
+     0     0   52.00000    0   14   59.00000   52.00000  11.9%     -    1s
+     0     0   52.00000    0   14   59.00000   52.00000  11.9%     -    1s
+     0     0   52.00000    0   14   59.00000   52.00000  11.9%     -    1s
+H    0     0                      58.0000000   52.00000  10.3%     -    1s
+     0     0   52.00000    0    4   58.00000   52.00000  10.3%     -    2s
+     0     0   52.00000    0   28   58.00000   52.00000  10.3%     -    3s
+     0     0   52.00000    0   40   58.00000   52.00000  10.3%     -    3s
+     0     0   52.00000    0   12   58.00000   52.00000  10.3%     -    4s
+H    0     0                      56.0000000   52.00000  7.14%     -    4s
+     0     0   52.00000    0   30   56.00000   52.00000  7.14%     -    5s
+     0     0   52.00000    0   14   56.00000   52.00000  7.14%     -    6s
+H    0     0                      55.0000000   52.00000  5.45%     -    6s
+     0     0   52.00000    0   18   55.00000   52.00000  5.45%     -    6s
+     0     0   52.00000    0   26   55.00000   52.00000  5.45%     -    7s
+     0     0   52.00000    0   24   55.00000   52.00000  5.45%     -    7s
+     0     0   52.00000    0   35   55.00000   52.00000  5.45%     -    8s
+     0     0   52.00000    0   30   55.00000   52.00000  5.45%     -    9s
+     0     0   52.00000    0   30   55.00000   52.00000  5.45%     -   10s
+     0     0     cutoff    0        55.00000   55.00000  0.00%     -   13s
+
+Explored 1 nodes (5388 simplex iterations) in 13.36 seconds (0.63 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 5: 55 56 58 ... 65
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.500000000000e+01, best bound 5.500000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_220.sol'
+

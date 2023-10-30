@@ -1,0 +1,55 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:39:00 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_829.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-35/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_829.mps
+Reading time = 0.03 seconds
+RCPSP_829: 19662 rows, 7750 columns, 60956 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 19662 rows, 7750 columns and 60956 nonzeros
+Model fingerprint: 0x78209d1e
+Variable types: 62 continuous, 7688 integer (7688 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Presolve removed 8311 rows and 3166 columns
+Presolve time: 4.24s
+Presolved: 11351 rows, 4584 columns, 35775 nonzeros
+Variable types: 61 continuous, 4523 integer (4523 binary)
+
+Root relaxation: objective 7.300000e+01, 1386 iterations, 0.02 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   73.00000    0    5          -   73.00000      -     -    4s
+     0     0   76.00000    0   13          -   76.00000      -     -    4s
+H    0     0                      76.0000000   76.00000  0.00%     -    6s
+
+Cutting planes:
+  Learned: 1
+
+Explored 1 nodes (4021 simplex iterations) in 6.58 seconds (3.17 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 76 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.600000000000e+01, best bound 7.600000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_829.sol'
+

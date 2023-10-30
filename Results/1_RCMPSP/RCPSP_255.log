@@ -1,0 +1,53 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:33:57 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_255.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-39/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_255.mps
+Reading time = 0.01 seconds
+RCPSP_255: 5339 rows, 2080 columns, 17984 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5339 rows, 2080 columns and 17984 nonzeros
+Model fingerprint: 0xd897d48e
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 3005 rows and 1163 columns
+Presolve time: 0.18s
+Presolved: 2334 rows, 917 columns, 7946 nonzeros
+Variable types: 31 continuous, 886 integer (886 binary)
+
+Root relaxation: objective 7.100000e+01, 298 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   71.00000    0    2          -   71.00000      -     -    0s
+H    0     0                      73.0000000   71.00000  2.74%     -    0s
+     0     0   72.00000    0   32   73.00000   72.00000  1.37%     -    0s
+*    0     0               0      72.0000000   72.00000  0.00%     -    2s
+
+Explored 1 nodes (1179 simplex iterations) in 2.42 seconds (0.26 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 72 73 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.200000000000e+01, best bound 7.200000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_255.sol'
+

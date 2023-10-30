@@ -1,0 +1,94 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 12:56:39 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1485.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-34/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1485.mps
+Reading time = 0.09 seconds
+RCPSP_1485: 75214 rows, 29890 columns, 236988 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 75214 rows, 29890 columns and 236988 nonzeros
+Model fingerprint: 0x8f997b1d
+Variable types: 122 continuous, 29768 integer (29768 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 7e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 7e+02]
+Presolve removed 11251 rows and 1827 columns
+Presolve time: 4.49s
+Presolved: 63963 rows, 28063 columns, 210325 nonzeros
+Variable types: 121 continuous, 27942 integer (27942 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 63963 rows, 28063 columns, 210325 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    7.7238311e+01   4.782131e-03   1.761582e+08      7s
+    4687    7.7000000e+01   0.000000e+00   0.000000e+00      8s
+Concurrent spin time: 1.45s
+
+Solved with dual simplex (primal model)
+
+Root relaxation: objective 7.700000e+01, 10244 iterations, 3.84 seconds (0.34 work units)
+Total elapsed time = 15.47s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   77.00000    0  164          -   77.00000      -     -   19s
+     0     0   77.00000    0 1347          -   77.00000      -     -   93s
+     0     0   77.00000    0 1381          -   77.00000      -     -  107s
+     0     0   77.00000    0 1372          -   77.00000      -     -  120s
+     0     0   77.00000    0 1289          -   77.00000      -     -  122s
+     0     0   77.00000    0 1264          -   77.00000      -     -  123s
+     0     0   77.00000    0 1521          -   77.00000      -     -  131s
+     0     0   77.00000    0    6          -   77.00000      -     -  231s
+     0     0   77.00000    0   87          -   77.00000      -     -  263s
+     0     0   77.00000    0   20          -   77.00000      -     -  298s
+     0     0   77.00000    0   40          -   77.00000      -     -  327s
+     0     0   77.00000    0    2          -   77.00000      -     -  335s
+     0     0   77.00000    0    2          -   77.00000      -     -  340s
+     0     0   77.00000    0    8          -   77.00000      -     -  343s
+     0     0   77.00000    0    2          -   77.00000      -     -  349s
+     0     0   77.00000    0    4          -   77.00000      -     -  349s
+     0     0   77.00000    0    2          -   77.00000      -     -  354s
+H    0     0                     656.0000000   77.00000  88.3%     -  358s
+     0     0   77.00000    0    2  656.00000   77.00000  88.3%     -  358s
+H    0     0                      77.0000000   77.00000  0.00%     -  366s
+     0     0   77.00000    0    2   77.00000   77.00000  0.00%     -  366s
+
+Cutting planes:
+  Gomory: 2
+  Cover: 5
+  Implied bound: 32
+  MIR: 258
+  RLT: 91
+  Relax-and-lift: 60
+
+Explored 1 nodes (74037 simplex iterations) in 366.05 seconds (31.79 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 77 656 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.700000000000e+01, best bound 7.700000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1485.sol'
+

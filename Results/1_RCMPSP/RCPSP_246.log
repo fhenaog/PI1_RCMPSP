@@ -1,0 +1,105 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:33:59 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_246.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-35/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_246.mps
+Reading time = 0.01 seconds
+RCPSP_246: 5339 rows, 2080 columns, 17984 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5339 rows, 2080 columns and 17984 nonzeros
+Model fingerprint: 0xdb43d54c
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 3187 rows and 1230 columns
+Presolve time: 0.20s
+Presolved: 2152 rows, 850 columns, 7199 nonzeros
+Variable types: 31 continuous, 819 integer (819 binary)
+
+Root relaxation: objective 4.300000e+01, 313 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   43.00000    0   60          -   43.00000      -     -    0s
+     0     0   43.00000    0  119          -   43.00000      -     -    0s
+     0     0   43.00000    0  118          -   43.00000      -     -    0s
+     0     0   43.00000    0   59          -   43.00000      -     -    1s
+     0     0   43.00000    0   58          -   43.00000      -     -    1s
+     0     0   43.01060    0  119          -   43.01060      -     -    1s
+H    0     0                      89.0000000   43.01060  51.7%     -    2s
+     0     0   43.01060    0  128   89.00000   43.01060  51.7%     -    2s
+     0     0   43.74074    0  161   89.00000   43.74074  50.9%     -    2s
+H    0     0                      87.0000000   43.74074  49.7%     -    2s
+     0     0   43.74074    0  163   87.00000   43.74074  49.7%     -    2s
+     0     0   43.74153    0  165   87.00000   43.74153  49.7%     -    2s
+     0     0   43.75633    0  149   87.00000   43.75633  49.7%     -    2s
+     0     0   43.75633    0  139   87.00000   43.75633  49.7%     -    2s
+H    0     0                      86.0000000   43.75633  49.1%     -    2s
+H    0     0                      73.0000000   43.76644  40.0%     -    3s
+     0     0   43.76644    0  165   73.00000   43.76644  40.0%     -    3s
+H    0     0                      72.0000000   43.76644  39.2%     -    3s
+     0     0   43.76644    0  165   72.00000   43.76644  39.2%     -    3s
+     0     0   43.76656    0  167   72.00000   43.76656  39.2%     -    3s
+H    0     0                      70.0000000   43.76656  37.5%     -    3s
+     0     0   43.76656    0  167   70.00000   43.76656  37.5%     -    3s
+     0     0   43.76678    0  191   70.00000   43.76678  37.5%     -    3s
+     0     0   43.76678    0  147   70.00000   43.76678  37.5%     -    3s
+H    0     0                      69.0000000   43.76678  36.6%     -    3s
+H    0     0                      68.0000000   43.76678  35.6%     -    3s
+     0     2   43.76678    0   68   68.00000   43.76678  35.6%     -    4s
+     3     7   44.74074    2   98   68.00000   44.74074  34.2%   236    5s
+H   31    43                      67.0000000   44.74074  33.2%   102    6s
+H   35    43                      66.0000000   44.74074  32.2%   105    6s
+H   37    43                      65.0000000   44.74074  31.2%   112    6s
+    86   100   45.00000    7  124   65.00000   44.74074  31.2%   111   41s
+H   87   100                      63.0000000   44.74074  29.0%   110   41s
+H  110   100                      61.0000000   44.74074  26.7%   104   41s
+   118   125   45.00000    8  114   61.00000   44.74074  26.7%   102   46s
+H  121   125                      59.0000000   44.74074  24.2%   100   46s
+  1838  1215   53.00000    8   99   59.00000   45.00000  23.7%  23.4   50s
+  5036  2305   50.00000   42   59   59.00000   46.00000  22.0%  19.2   55s
+  5721  2322 infeasible   36        59.00000   46.00000  22.0%  19.0   75s
+H 5723  2218                      58.0000000   46.00000  20.7%  19.0   75s
+H 5724  2076                      57.0000000   46.00000  19.3%  19.0   75s
+H 5733  2076                      57.0000000   46.00000  19.3%  19.1   75s
+  5769  2065   54.00000   35  147   57.00000   46.00000  19.3%  19.1   85s
+  5774  2068   54.00000   18   30   57.00000   46.00000  19.3%  19.1   90s
+  5850  2104   52.00000   20   82   57.00000   46.00000  19.3%  19.7   95s
+  6454  2093   52.00000   31   78   57.00000   46.00000  19.3%  19.4  100s
+  6768  2199   53.00000   35   83   57.00000   46.00000  19.3%  19.6  105s
+  9502  2441   56.00000   27   63   57.00000   49.00000  14.0%  16.8  110s
+ 13516  2368 infeasible   37        57.00000   50.00000  12.3%  14.7  115s
+ 16512  3103   53.00000   36   81   57.00000   50.00000  12.3%  13.9  120s
+ 19690  2902   52.00000   39   74   57.00000   52.00000  8.77%  13.5  128s
+H19710  2365                      56.0000000   52.00000  7.14%  13.5  128s
+ 19763  1946 infeasible   41        56.00000   52.00000  7.14%  13.5  130s
+ 22245   863 infeasible   30        56.00000   52.00000  7.14%  13.4  153s
+ 22594   554 infeasible   31        56.00000   52.00000  7.14%  13.4  155s
+ 23248    37     cutoff   33        56.00000   52.00000  7.14%  13.3  160s
+
+Explored 23507 nodes (320348 simplex iterations) in 161.31 seconds (4.75 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 10: 56 57 57 ... 67
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.600000000000e+01, best bound 5.600000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_246.sol'
+

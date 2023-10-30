@@ -1,0 +1,60 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 11:47:26 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1117.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-11-06
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-36/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1117.mps
+Reading time = 0.06 seconds
+RCPSP_1117: 42919 rows, 17020 columns, 159123 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 42919 rows, 17020 columns and 159123 nonzeros
+Model fingerprint: 0x5506f1bf
+Variable types: 92 continuous, 16928 integer (16928 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 4e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+02]
+Presolve removed 7416 rows and 1725 columns
+Presolve time: 2.72s
+Presolved: 35503 rows, 15295 columns, 138666 nonzeros
+Variable types: 91 continuous, 15204 integer (15204 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 35503 rows, 15295 columns, 138666 nonzeros
+
+Concurrent spin time: 0.29s
+
+Solved with dual simplex (dual model)
+
+Root relaxation: objective 6.500000e+01, 17146 iterations, 1.45 seconds (0.14 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                      65.0000000   65.00000  0.00%     -    4s
+     0     0   65.00000    0 2214   65.00000   65.00000  0.00%     -    4s
+
+Explored 1 nodes (17195 simplex iterations) in 4.68 seconds (2.18 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 65 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.500000000000e+01, best bound 6.500000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1117.sol'
+

@@ -1,0 +1,59 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:34:14 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_496.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-39/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_496.mps
+Reading time = 0.02 seconds
+RCPSP_496: 19624 rows, 7750 columns, 60918 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 19624 rows, 7750 columns and 60918 nonzeros
+Model fingerprint: 0xbee72058
+Variable types: 62 continuous, 7688 integer (7688 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Presolve removed 6476 rows and 2145 columns
+Presolve time: 1.77s
+Presolved: 13148 rows, 5605 columns, 42480 nonzeros
+Variable types: 61 continuous, 5544 integer (5544 binary)
+
+Root relaxation: objective 6.100000e+01, 1896 iterations, 0.05 seconds (0.02 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   61.00000    0    8          -   61.00000      -     -    2s
+H    0     0                      68.0000000   61.00000  10.3%     -    4s
+     0     0   62.03861    0   15   68.00000   62.03861  8.77%     -    4s
+     0     0   64.00000    0   13   68.00000   64.00000  5.88%     -    4s
+H    0     0                      64.0000000   64.00000  0.00%     -    4s
+     0     0   64.00000    0   13   64.00000   64.00000  0.00%     -    4s
+
+Cutting planes:
+  MIR: 13
+  RLT: 5
+
+Explored 1 nodes (4338 simplex iterations) in 4.77 seconds (2.06 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 64 68 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.400000000000e+01, best bound 6.400000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_496.sol'
+

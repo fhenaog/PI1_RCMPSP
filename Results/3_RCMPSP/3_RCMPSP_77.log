@@ -1,0 +1,202 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 17:31:27 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "3_RCMPSP_77.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-11-06
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-36/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file 3_RCMPSP_77.mps
+Reading time = 1.45 seconds
+3_RCMPSP: 921040 rows, 205130 columns, 3145530 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 921040 rows, 205130 columns and 3145530 nonzeros
+Model fingerprint: 0x59798c76
+Variable types: 320 continuous, 204810 integer (204810 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+03]
+  Objective range  [4e+03, 8e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Found heuristic solution: objective -502.0000000
+Presolve removed 187310 rows and 6085 columns (presolve time = 5s) ...
+Presolve removed 294680 rows and 6085 columns (presolve time = 10s) ...
+Presolve removed 297380 rows and 6085 columns (presolve time = 15s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 20s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 25s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 30s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 35s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 40s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 45s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 50s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 55s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 60s) ...
+Presolve removed 297380 rows and 8605 columns (presolve time = 65s) ...
+Presolve removed 306060 rows and 11965 columns (presolve time = 70s) ...
+Presolve removed 313620 rows and 14485 columns (presolve time = 75s) ...
+Presolve removed 313620 rows and 14485 columns
+Presolve time: 77.84s
+Presolved: 607420 rows, 190645 columns, 2150892 nonzeros
+Variable types: 310 continuous, 190335 integer (190335 binary)
+
+Deterministic concurrent LP optimizer: primal simplex, dual simplex, and barrier
+Showing barrier log only...
+
+Root relaxation presolved: 190645 rows, 798065 columns, 2341537 nonzeros
+
+Root barrier log...
+
+Elapsed ordering time = 5s
+Elapsed ordering time = 10s
+Elapsed ordering time = 15s
+Elapsed ordering time = 20s
+Elapsed ordering time = 110s
+Elapsed ordering time = 115s
+Elapsed ordering time = 120s
+Elapsed ordering time = 125s
+Elapsed ordering time = 130s
+Ordering time: 608.86s
+Elapsed ordering time = 609s
+Elapsed ordering time = 610s
+Elapsed ordering time = 615s
+Elapsed ordering time = 620s
+Elapsed ordering time = 625s
+Elapsed ordering time = 630s
+Elapsed ordering time = 640s
+Elapsed ordering time = 646s
+Elapsed ordering time = 653s
+Elapsed ordering time = 658s
+Elapsed ordering time = 660s
+Elapsed ordering time = 665s
+Elapsed ordering time = 671s
+Elapsed ordering time = 676s
+Elapsed ordering time = 680s
+Elapsed ordering time = 685s
+Elapsed ordering time = 690s
+Elapsed ordering time = 695s
+Elapsed ordering time = 700s
+Elapsed ordering time = 705s
+Elapsed ordering time = 710s
+Elapsed ordering time = 715s
+Elapsed ordering time = 720s
+Elapsed ordering time = 725s
+Elapsed ordering time = 730s
+Elapsed ordering time = 735s
+Elapsed ordering time = 740s
+Elapsed ordering time = 745s
+Elapsed ordering time = 750s
+Elapsed ordering time = 755s
+Elapsed ordering time = 760s
+Elapsed ordering time = 765s
+Elapsed ordering time = 770s
+Elapsed ordering time = 775s
+Elapsed ordering time = 780s
+Elapsed ordering time = 785s
+Elapsed ordering time = 790s
+Elapsed ordering time = 795s
+Elapsed ordering time = 800s
+Elapsed ordering time = 805s
+Elapsed ordering time = 810s
+Elapsed ordering time = 815s
+Elapsed ordering time = 820s
+Ordering time: 820.23s
+
+Barrier statistics:
+ Dense cols : 498
+ AA' NZ     : 7.933e+06
+ Factor NZ  : 1.125e+08 (roughly 1.3 GB of memory)
+ Factor Ops : 4.798e+11 (roughly 2 seconds per iteration)
+ Threads    : 30
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   4.23009347e+07 -5.02000000e+02  1.15e+05 0.00e+00  1.88e+02  1039s
+   1   2.60680449e+07  2.18287750e+04  1.44e+04 5.79e+00  4.96e+01  1076s
+   2   6.81150512e+06  2.85412347e+04  1.82e+02 1.14e+00  8.74e+00  1116s
+   3   6.05501184e+05  3.00624519e+04  5.03e+00 1.42e-05  5.82e-01  1158s
+   4   7.46797105e+04  3.42877651e+04  2.67e-01 7.71e-06  4.09e-02  1203s
+   5   5.88322679e+04  4.79105585e+04  6.16e-02 2.04e-06  1.10e-02  1238s
+   6   5.59906223e+04  4.86745551e+04  3.75e-02 1.53e-06  7.40e-03  1272s
+   7   5.47113079e+04  4.88461519e+04  2.85e-02 1.40e-06  5.93e-03  1344s
+   8   5.42264066e+04  4.89739371e+04  2.40e-02 1.34e-06  5.31e-03  1404s
+   9   5.30607082e+04  4.92354127e+04  1.46e-02 1.16e-06  3.87e-03  1452s
+  10   5.24167708e+04  4.93072965e+04  1.03e-02 1.09e-06  3.15e-03  1506s
+  11   5.18894161e+04  4.93716539e+04  7.47e-03 1.02e-06  2.55e-03  1553s
+  12   5.05946135e+04  4.93299933e+04  2.72e-03 6.99e-07  1.28e-03  1602s
+  13   5.00362724e+04  4.95879329e+04  1.09e-03 9.61e-09  4.53e-04  1643s
+  14   4.95934433e+04  4.95928445e+04  4.26e-12 3.55e-13  6.06e-07  1679s
+  15   4.95930004e+04  4.95929998e+04  6.71e-12 3.55e-13  6.06e-10  1716s
+  16   4.95930000e+04  4.95930000e+04  5.30e-11 3.91e-13  6.06e-16  1747s
+
+Barrier solved model in 16 iterations and 1747.57 seconds (101.23 work units)
+Optimal objective 4.95930000e+04
+
+
+Root crossover log...
+
+  190635 DPushes remaining with DInf 0.0000000e+00              1813s
+       0 DPushes remaining with DInf 0.0000000e+00              1815s
+
+       0 PPushes remaining with PInf 0.0000000e+00              1815s
+
+  Push phase complete: Pinf 0.0000000e+00, Dinf 3.6484149e-12   1815s
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+  170606    4.9593000e+04   0.000000e+00   0.000000e+00   1815s
+  170606    4.9593000e+04   0.000000e+00   0.000000e+00   2073s
+  170606    4.9593000e+04   0.000000e+00   0.000000e+00   2123s
+Concurrent spin time: 1.38s
+
+Solved with barrier
+
+Root relaxation: objective 4.959300e+04, 170606 iterations, 2045.67 seconds (69.44 work units)
+Total elapsed time = 2601.07s
+Total elapsed time = 2690.52s
+Total elapsed time = 2722.83s
+Total elapsed time = 2748.74s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 49593.0000    0 1209 -502.00000 49593.0000  9979%     - 2875s
+     0     0 49593.0000    0 1209 -502.00000 49593.0000  9979%     - 2898s
+H    0     0                    14226.000000 49593.0000   249%     - 3079s
+     0     0 49593.0000    0 2808 14226.0000 49593.0000   249%     - 3274s
+     0     0 49593.0000    0 2800 14226.0000 49593.0000   249%     - 3306s
+     0     0 49593.0000    0 2584 14226.0000 49593.0000   249%     - 3397s
+     0     0 49593.0000    0 2579 14226.0000 49593.0000   249%     - 3398s
+     0     0 49593.0000    0  651 14226.0000 49593.0000   249%     - 3600s
+
+Cutting planes:
+  Learned: 1
+  Gomory: 161
+  Cover: 188
+  Implied bound: 105
+  MIR: 1907
+  StrongCG: 91
+  Flow cover: 2951
+  Zero half: 10
+  RLT: 898
+  Relax-and-lift: 418
+
+Explored 1 nodes (359229 simplex iterations) in 3718.72 seconds (669.13 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 14226 -502 
+
+Time limit reached
+Best objective 1.422600000000e+04, best bound 4.959300000000e+04, gap 248.6082%
+
+Wrote result file '3_RCMPSP_77.sol'
+

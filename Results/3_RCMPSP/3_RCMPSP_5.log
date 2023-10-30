@@ -1,0 +1,53 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 16:39:46 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "3_RCMPSP_5.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-34/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file 3_RCMPSP_5.mps
+Reading time = 0.04 seconds
+3_RCMPSP: 36772 rows, 8258 columns, 130252 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 36772 rows, 8258 columns and 130252 nonzeros
+Model fingerprint: 0xe5a9222a
+Variable types: 64 continuous, 8194 integer (8194 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [7e+03, 7e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+02]
+Found heuristic solution: objective -91.0000000
+Presolve removed 20358 rows and 1840 columns
+Presolve time: 3.64s
+Presolved: 16414 rows, 6418 columns, 64678 nonzeros
+Variable types: 62 continuous, 6356 integer (6356 binary)
+
+Root relaxation: objective 1.420000e+04, 2853 iterations, 0.16 seconds (0.12 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 14200.0000    0    6  -91.00000 14200.0000      -     -    4s
+H    0     0                    14200.000000 14200.0000  0.00%     -    4s
+     0     0 14200.0000    0    6 14200.0000 14200.0000  0.00%     -    4s
+
+Explored 1 nodes (9129 simplex iterations) in 4.96 seconds (3.14 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 14200 -91 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.420000000000e+04, best bound 1.420000000000e+04, gap 0.0000%
+
+Wrote result file '3_RCMPSP_5.sol'
+

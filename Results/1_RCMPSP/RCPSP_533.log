@@ -1,0 +1,85 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:34:22 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_533.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-39/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_533.mps
+Reading time = 0.02 seconds
+RCPSP_533: 19624 rows, 7750 columns, 64639 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 19624 rows, 7750 columns and 64639 nonzeros
+Model fingerprint: 0xb2292ebd
+Variable types: 62 continuous, 7688 integer (7688 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+02]
+Presolve removed 7207 rows and 2515 columns
+Presolve time: 2.51s
+Presolved: 12417 rows, 5235 columns, 42557 nonzeros
+Variable types: 61 continuous, 5174 integer (5174 binary)
+
+Root relaxation: objective 7.200000e+01, 1735 iterations, 0.02 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   72.00000    0   22          -   72.00000      -     -    2s
+     0     0   72.00000    0  107          -   72.00000      -     -    5s
+     0     0   72.00000    0  141          -   72.00000      -     -    5s
+     0     0   72.00000    0   14          -   72.00000      -     -    6s
+     0     0   72.00000    0    7          -   72.00000      -     -    6s
+     0     0   72.00000    0   11          -   72.00000      -     -    6s
+     0     0   72.00000    0    2          -   72.00000      -     -    7s
+     0     0   72.00000    0    2          -   72.00000      -     -    7s
+     0     0   72.00000    0    4          -   72.00000      -     -    7s
+     0     0   72.00000    0   10          -   72.00000      -     -    8s
+     0     0   72.00000    0   24          -   72.00000      -     -    9s
+     0     0   72.00000    0    2          -   72.00000      -     -    9s
+     0     0   72.00000    0    2          -   72.00000      -     -   10s
+     0     0   72.00000    0    3          -   72.00000      -     -   10s
+H    0     0                     336.0000000   72.00000  78.6%     -   10s
+     0     0   72.00000    0    2  336.00000   72.00000  78.6%     -   10s
+H    0     0                      76.0000000   72.00000  5.26%     -   12s
+     0     0   72.00000    0   15   76.00000   72.00000  5.26%     -   17s
+     0     0   72.00000    0  160   76.00000   72.00000  5.26%     -   23s
+     0     0   72.00000    0   98   76.00000   72.00000  5.26%     -   24s
+H    0     0                      74.0000000   72.00000  2.70%     -   25s
+     0     0   72.00000    0    2   74.00000   72.00000  2.70%     -   25s
+H    0     0                      73.0000000   72.00000  1.37%     -   25s
+H    0     0                      72.0000000   72.00000  0.00%     -   26s
+     0     0   72.00000    0   11   72.00000   72.00000  0.00%     -   26s
+
+Cutting planes:
+  Gomory: 8
+  Cover: 37
+  Implied bound: 22
+  Clique: 34
+  MIR: 43
+  StrongCG: 1
+  Mod-K: 2
+  RLT: 58
+  Relax-and-lift: 10
+
+Explored 1 nodes (16240 simplex iterations) in 26.07 seconds (4.69 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 5: 72 73 74 ... 336
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.200000000000e+01, best bound 7.200000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_533.sol'
+

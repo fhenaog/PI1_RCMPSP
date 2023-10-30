@@ -1,0 +1,72 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 11:48:05 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1139.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-34/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1139.mps
+Reading time = 0.07 seconds
+RCPSP_1139: 42947 rows, 17020 columns, 134581 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 42947 rows, 17020 columns and 134581 nonzeros
+Model fingerprint: 0x150d33ed
+Variable types: 92 continuous, 16928 integer (16928 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+02]
+Presolve removed 7032 rows and 1201 columns (presolve time = 5s) ...
+Presolve removed 8283 rows and 2176 columns
+Presolve time: 7.90s
+Presolved: 34664 rows, 14844 columns, 112055 nonzeros
+Variable types: 91 continuous, 14753 integer (14753 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 34664 rows, 14844 columns, 112055 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    7.9434621e+01   5.249164e-03   2.461816e+08     10s
+     949    7.9900583e+01   3.101658e+02   1.376629e+08     10s
+    1912    7.9000000e+01   0.000000e+00   0.000000e+00     11s
+Concurrent spin time: 0.21s
+
+Solved with dual simplex (dual model)
+
+Root relaxation: objective 7.900000e+01, 10565 iterations, 2.59 seconds (0.09 work units)
+Total elapsed time = 15.49s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   79.00000    0   16          -   79.00000      -     -   18s
+H    0     0                      80.0000000   79.00000  1.25%     -   45s
+     0     0   79.00000    0   94   80.00000   79.00000  1.25%     -   46s
+H    0     0                      79.0000000   79.00000  0.00%     -   80s
+     0     0   79.00000    0  874   79.00000   79.00000  0.00%     -   80s
+
+Explored 1 nodes (22619 simplex iterations) in 80.69 seconds (4.59 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 79 80 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 7.900000000000e+01, best bound 7.900000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1139.sol'
+

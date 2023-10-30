@@ -1,0 +1,52 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:34:18 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_504.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-34/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_504.mps
+Reading time = 0.02 seconds
+RCPSP_504: 19624 rows, 7750 columns, 60918 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 19624 rows, 7750 columns and 60918 nonzeros
+Model fingerprint: 0xc9368cdc
+Variable types: 62 continuous, 7688 integer (7688 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 4e+02]
+Found heuristic solution: objective 83.0000000
+Presolve removed 10546 rows and 4248 columns
+Presolve time: 4.89s
+Presolved: 9078 rows, 3502 columns, 27927 nonzeros
+Variable types: 61 continuous, 3441 integer (3441 binary)
+
+Root relaxation: objective 8.100000e+01, 1223 iterations, 0.01 seconds (0.01 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+H    0     0                      81.0000000   81.00000  0.00%     -    4s
+     0     0   81.00000    0  551   81.00000   81.00000  0.00%     -    4s
+
+Explored 1 nodes (1223 simplex iterations) in 4.95 seconds (3.17 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 2: 81 83 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.100000000000e+01, best bound 8.100000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_504.sol'
+

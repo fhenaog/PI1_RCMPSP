@@ -1,0 +1,86 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  2 11:33:57 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_51.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-10-30
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-35/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_51.mps
+Reading time = 0.02 seconds
+RCPSP_51: 5329 rows, 2080 columns, 17044 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 5329 rows, 2080 columns and 17044 nonzeros
+Model fingerprint: 0x6aefed5e
+Variable types: 32 continuous, 2048 integer (2048 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 2e+02]
+Presolve removed 2572 rows and 957 columns
+Presolve time: 0.19s
+Presolved: 2757 rows, 1123 columns, 9099 nonzeros
+Variable types: 31 continuous, 1092 integer (1092 binary)
+
+Root relaxation: objective 5.400000e+01, 408 iterations, 0.00 seconds (0.00 work units)
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   54.00000    0    9          -   54.00000      -     -    0s
+H    0     0                      60.0000000   54.00000  10.0%     -    0s
+     0     0   54.00000    0   53   60.00000   54.00000  10.0%     -    0s
+     0     0   54.00000    0    9   60.00000   54.00000  10.0%     -    0s
+     0     0   54.00000    0   11   60.00000   54.00000  10.0%     -    1s
+     0     0   54.00000    0   16   60.00000   54.00000  10.0%     -    1s
+     0     0   54.00000    0   10   60.00000   54.00000  10.0%     -    1s
+     0     0   54.00000    0   26   60.00000   54.00000  10.0%     -    1s
+     0     0   54.00000    0   25   60.00000   54.00000  10.0%     -    1s
+     0     0   54.00000    0   25   60.00000   54.00000  10.0%     -    1s
+H    0     0                      59.0000000   54.00000  8.47%     -    2s
+     0     0   54.00000    0   13   59.00000   54.00000  8.47%     -    4s
+H    0     0                      58.0000000   54.00000  6.90%     -    4s
+     0     0   54.00000    0   50   58.00000   54.00000  6.90%     -    5s
+     0     0   54.00000    0   69   58.00000   54.00000  6.90%     -    5s
+     0     0   54.00000    0   19   58.00000   54.00000  6.90%     -    8s
+H    0     0                      56.0000000   54.00000  3.57%     -    8s
+     0     0   54.00000    0   86   56.00000   54.00000  3.57%     -    9s
+     0     0   54.00000    0   60   56.00000   54.00000  3.57%     -    9s
+     0     0   54.00000    0   63   56.00000   54.00000  3.57%     -    9s
+     0     0   54.00000    0   13   56.00000   54.00000  3.57%     -   12s
+     0     0   54.00000    0   14   56.00000   54.00000  3.57%     -   12s
+     0     0   54.00000    0   78   56.00000   54.00000  3.57%     -   12s
+     0     0   54.00000    0   74   56.00000   54.00000  3.57%     -   12s
+     0     0   55.00000    0   28   56.00000   55.00000  1.79%     -   15s
+     0     0   55.00000    0   72   56.00000   55.00000  1.79%     -   15s
+     0     0   55.82716    0    6   56.00000   55.82716  0.31%     -   17s
+     0     0   55.82716    0    6   56.00000   55.82716  0.31%     -   17s
+
+Cutting planes:
+  Cover: 20
+  Implied bound: 14
+  Clique: 48
+  MIR: 11
+  StrongCG: 2
+  RLT: 4
+  Relax-and-lift: 3
+
+Explored 1 nodes (8320 simplex iterations) in 17.73 seconds (0.71 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 4: 56 58 59 60 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 5.600000000000e+01, best bound 5.600000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_51.sol'
+

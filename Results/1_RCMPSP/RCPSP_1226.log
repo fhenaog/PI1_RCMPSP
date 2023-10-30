@@ -1,0 +1,79 @@
+
+Gurobi 10.0.3 (linux64, gurobi_cl) logging started Thu Nov  9 11:49:14 2023
+
+Set parameter Username
+Set parameter TimeLimit to value 3600
+Set parameter LogFile to value "RCPSP_1226.log"
+Set parameter Threads to value 32
+Academic license - for non-commercial use only - expires 2024-11-06
+Using license file /home/jrivera6/gurobi-licenses/v1003/compute-0-36/gurobi.lic
+
+Gurobi Optimizer version 10.0.3 build v10.0.3rc0 (linux64)
+Copyright (c) 2023, Gurobi Optimization, LLC
+
+Read MPS format model from file RCPSP_1226.mps
+Reading time = 0.06 seconds
+RCPSP_1226: 42947 rows, 17020 columns, 151052 nonzeros
+
+CPU model: Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz, instruction set [SSE2|AVX|AVX2|AVX512]
+Thread count: 32 physical cores, 32 logical processors, using up to 32 threads
+
+Optimize a model with 42947 rows, 17020 columns and 151052 nonzeros
+Model fingerprint: 0x9261b969
+Variable types: 92 continuous, 16928 integer (16928 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+02]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 5e+02]
+Presolve removed 7820 rows and 1989 columns
+Presolve time: 4.43s
+Presolved: 35127 rows, 15031 columns, 129112 nonzeros
+Variable types: 91 continuous, 14940 integer (14940 binary)
+
+Deterministic concurrent LP optimizer: primal and dual simplex (primal and dual model)
+Showing first log only...
+
+Root relaxation presolved: 35127 rows, 15031 columns, 129112 nonzeros
+
+
+Root simplex log...
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    8.7344412e+01   4.864310e-03   1.423106e+08      6s
+    2127    8.7000000e+01   0.000000e+00   0.000000e+00      6s
+Concurrent spin time: 0.53s
+
+Solved with dual simplex (dual model)
+
+Root relaxation: objective 8.700000e+01, 17090 iterations, 1.80 seconds (0.14 work units)
+Total elapsed time = 10.23s
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0   87.00000    0   38          -   87.00000      -     -   10s
+     0     0   87.00000    0  602          -   87.00000      -     -   24s
+     0     0   87.00000    0  636          -   87.00000      -     -   25s
+     0     0   87.00000    0   24          -   87.00000      -     -   29s
+H    0     0                      87.0000000   87.00000  0.00%     -   32s
+     0     0   87.00000    0   10   87.00000   87.00000  0.00%     -   32s
+
+Cutting planes:
+  Gomory: 8
+  Cover: 3
+  Implied bound: 33
+  MIR: 170
+  RLT: 124
+  Relax-and-lift: 35
+
+Explored 1 nodes (32037 simplex iterations) in 32.43 seconds (6.06 work units)
+Thread count was 32 (of 32 available processors)
+
+Solution count 1: 87 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.700000000000e+01, best bound 8.700000000000e+01, gap 0.0000%
+
+Wrote result file 'RCPSP_1226.sol'
+
