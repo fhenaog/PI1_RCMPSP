@@ -21,7 +21,7 @@ with open("resultsResource.txt", "w") as res:
         for p in NoProj:
             for type in range(1,3): #For constant or variable resource values 1 - constant, 2 - variable
                 for alpha in alphaVal:
-                    
+                    # if n>=70:
                     problem=RCMPSP_Resource(inst,p,alpha,type)
                     if result=="s":
                         problem.solve()
@@ -33,5 +33,9 @@ with open("resultsResource.txt", "w") as res:
                             res.write(f"{inst : ^10}{p : ^10}{'Variable' : ^15}{str(alpha) : ^10}{str(round(problem.objVal,1)) : ^15}{str(round(problem.gap,2)) : ^10}{str(round(problem.runtime,2)) : ^10}{str(problem.resources) : ^40}")
                             res.write('\n')
                     elif result=="w":
+                        print(n)
+                        # if n>=70:
                         problem.write(n)
                         n+=1
+                        # if n==71:
+                        #     n=n
